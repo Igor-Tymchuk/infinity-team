@@ -1,0 +1,9 @@
+.benefits-title span {
+  color: var(--c-lt-elem-accent);
+}
+
+@media only screen and (min-width: 1280px) {
+  .benefits-title {
+    max-width: 682px;
+  }
+}
