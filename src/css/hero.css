@@ -1,0 +1,126 @@
+.background-decor {
+    padding: 96px 0 56px 0;
+}
+
+.hero-content {
+    
+}
+
+.rect {
+    position: absolute;
+    display: inline-block;
+    border-radius: 16px;
+    top: 0;
+    right: 20px;
+width: 165px;
+height: 92px;
+/* background-color: #00b068; */
+background-color: #bcdfd1;
+transition: background-color 1s ;
+}
+
+h1 {
+    /* font-family: var(--second-family); */
+font-family: "Impact", sans-serif;
+font-weight: 400;
+font-size: 64px;
+line-height: 125%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+/* color: var(--accet-green); */
+color: #00b068;
+margin-bottom: 40px;
+}
+
+h1 span {
+    /* color: var(--black); */
+color: #000;
+}
+
+.button-box {
+    position: relative;
+    max-width: 416px;
+}
+.button {
+position: relative;
+    /* font-family: var(--font-family); */
+font-family: "Poppins", sans-serif;
+font-weight: 400;
+font-size: 18px;
+line-height: 156%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+/* color: var(--black); */
+color: #000;
+margin-bottom: 40px;
+padding: 32px 91px 32px 45px;
+border-radius: 16px;
+background-color: transparent;
+outline: none;
+border: none;
+z-index: 1;
+}
+
+.button-box:hover .rect {
+    background-color: #00b068;
+}
+
+.arrow-button {
+    position: absolute;
+    left: 6px;
+    top: 28px;
+    font-size: 28px;
+    color: #00b068;
+}
+
+.hero-description {
+font-weight: 400;
+font-size: 18px;
+line-height: 156%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #000;
+}
+
+.hero-description .decor {
+    color: #00b068;
+}
+
+.wraper-contact-list {
+background-color: #e4e5e6;
+padding: 32px 0;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+    .rect {   
+    width: 261px;
+    right: 0;
+  }
+  h1 {
+font-size: 136px;
+margin-bottom: 60px;
+  }
+  .button {
+    font-size: 20px;
+    line-height: 160%;
+  }
+  .contact-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .background-decor {
+    padding: 72px 0 64px 0;
+}
+.hero-description {
+    font-size: 20px;
+    line-height: 160%;
+}
+}
