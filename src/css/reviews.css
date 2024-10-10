@@ -57,10 +57,11 @@
 }
 
 .reviews-icon {
-  fill: var(--c-lt-text-main);
+  stroke: var(--c-lt-text-main);
+  fill: none;
 }
 .reviews-btn:disabled {
-  fill: var(--c-lt-elem-bg);
+  stroke: var(--c-lt-elem-bg);
 }
 
 @media only screen and (min-width: 768px) {
