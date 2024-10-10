@@ -1,72 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <section class="work" id="work-together">
-      <div class="container work-container">
-        <h2 class="section-title work-title">
-          let’s <span class="work-span">work together</span>
-        </h2>
-        <div>
-          <div>
-            <p>
-              CONTACT ME TO TRANSFORM YOUR IDEAS INTO EXCEPTIONAL SOLUTIONS.
-            </p>
-            <ul>
-              <li>
-                <svg class="icon-phone work-icon" width="24" height="24">
-                  <use href="../images/icons.svg#icon-phone"></use>
-                </svg>
-                <a href="tel:+380904567890">+38 090 456 78 90</a>
-              </li>
-              <li>
-                <svg class="icon-message work-icon" width="24" height="24">
-                  <use href="../images/icons.svg#icon-message"></use>
-                </svg>
-                <a href="mailto:lloydjefferson@gmail.com"
-                  >lloydjefferson@gmail.com</a
-                >
-              </li>
-              <li>
-                <svg class="icon-geo work-icon" width="24" height="24">
-                  <use href="../images/icons.svg#icon-geo"></use>
-                </svg>
-                <a href="">USA, New York</a>
-              </li>
-            </ul>
-          </div>
-
-          <form class="work-form">
-            <div>
-              <label class="work-label visually-hidden" for="email"></label>
-              <input
-                id="email"
-                type="email"
-                placeholder="Your email*"
-                pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-                title="Email"
-                required
-              />
-            </div>
-            <div>
-              <label class="work-label visually-hidden" for=""></label>
-              <textarea
-                name="user-comment"
-                id="user-comment"
-                class="modal-text"
-                placeholder="Message"
-              ></textarea>
-            </div>
-            <button class="btn work-btn" type="submit">SEND MESSAGE</button>
-          </form>
-        </div>
+<section class="work" id="work-together">
+  <div class="container work-container">
+    <h2 class="section-title work-title">
+      let’s <span class="work-span">work <br />together</span>
+    </h2>
+    <div class="work-auxiliary">
+      <div class="work-contact">
+        <p class="work-contact-title">
+          Contact me to transform <br />your ideas into exceptional solutions.
+        </p>
+        <ul class="work-contact-list">
+          <li class="work-contact-list-elem">
+            <svg class="work-icon" width="24" height="24">
+              <use
+                class="work-icon-svg"
+                href="../images/icons.svg#icon-phone"
+              ></use>
+            </svg>
+            <a
+              class="work-contact-link"
+              aria-label="Phone number"
+              href="tel:+380904567890"
+              >+38 090 456 78 90</a
+            >
+          </li>
+          <li class="work-contact-list-elem">
+            <svg class="work-icon" width="24" height="24">
+              <use
+                class="work-icon-svg"
+                href="../images/icons.svg#icon-message"
+              ></use>
+            </svg>
+            <a
+              class="work-contact-link"
+              aria-label="Email"
+              href="mailto:lloydjefferson@gmail.com"
+              >lloydjefferson@gmail.com</a
+            >
+          </li>
+          <li class="work-contact-list-elem">
+            <svg class="work-icon" width="24" height="24">
+              <use href="../images/icons.svg#icon-geo"></use>
+            </svg>
+            <a class="work-contact-link" aria-label="Open the map" href=""
+              >USA, New York</a
+            >
+          </li>
+        </ul>
       </div>
-    </section>
-  </body>
-</html>
+
+      <form class="work-form">
+        <div class="work-form-elem">
+          <label class="work-label visually-hidden" for="email"></label>
+          <input
+            class="work-input"
+            id="email"
+            type="email"
+            placeholder="Your email*"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            title="Email"
+            required
+          />
+        </div>
+        <div class="work-form-elem">
+          <label class="work-label visually-hidden" for="user-comment"></label>
+          <textarea
+            name="user-comment"
+            id="user-comment"
+            class="work-modal-text"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <button class="btn work-btn" type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+</section>
