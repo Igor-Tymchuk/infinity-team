@@ -16,6 +16,7 @@ body.dark-theme {
 /** TEXT STYLES */
 
 /* h1 */
+/* h1 - головний заголовок */
 .main-title {
   font-family: var(--ff-big-title-font);
   font-size: 64px;
@@ -27,6 +28,7 @@ body.dark-theme {
 }
 
 /* h2 */
+/* h2 - заголовки секцій*/
 .section-title {
   font-family: var(--ff-big-title-font);
   font-size: 52px;
@@ -38,6 +40,7 @@ body.dark-theme {
 }
 
 /* h3 */
+/* h3 - підзаголовки в середині секцій*/
 .section-subtitle {
   font-family: var(--ff-global-font);
   font-size: 32px;
@@ -49,6 +52,7 @@ body.dark-theme {
 }
 
 /* accent bigger text */
+/* акцентований текст*/
 .caption-text {
   font-family: var(--ff-global-font);
   font-size: 18px;
@@ -88,6 +92,7 @@ body.dark-theme {
 /** ELEM STYLES */
 
 /* main btn styles in 'MY PROJECTS' and 'WORK TOGETHER' sections */
+/* основні спільні стилі кнопок у секціях'MY PROJECTS' і 'WORK TOGETHER'  */
 .btn {
   display: flex;
   align-items: center;
@@ -106,6 +111,7 @@ body.dark-theme {
 }
 
 /* pattern styles for hidden elements */
+/* патернт для прихованих елементів*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -121,6 +127,7 @@ body.dark-theme {
 }
 
 /* lock scroll for modal and burger */
+/* блокування скроллу для відкритих модалок і бургера */
 .scroll-lock {
   overflow: hidden;
 }
