@@ -3,7 +3,7 @@ body {
   font-size: 16px;
   font-style: normal;
   line-height: 1.5;
-  letter-spacing: 0.03125em;
+  letter-spacing: 0.03em;
   background-color: var(--c-lt-body-bg);
   color: var(--c-lt-text-main);
 }
@@ -22,7 +22,7 @@ body.dark-theme {
   font-style: normal;
   font-weight: 400;
   line-height: 1.25;
-  letter-spacing: 0.028125em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
@@ -32,8 +32,8 @@ body.dark-theme {
   font-size: 52px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.2308;
-  letter-spacing: 0.03462em;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -44,7 +44,7 @@ body.dark-theme {
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;
-  letter-spacing: 0.015625em;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 
@@ -54,34 +54,34 @@ body.dark-theme {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5556;
-  letter-spacing: 0.02777em;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
   .main-title {
     font-size: 136px;
-    line-height: 1.1471;
-    letter-spacing: 0.01324em;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
   }
 
   .section-title {
     font-size: 108px;
-    line-height: 1.2308;
-    letter-spacing: 0.03462em;
+    line-height: 1.23;
+    letter-spacing: 0.03em;
   }
 
   .section-subtitle {
     font-size: 36px;
-    line-height: 1.3333;
-    letter-spacing: 0.01389em;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
   }
 
   .caption-text {
     font-size: 20px;
     line-height: 1.6;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -102,10 +102,10 @@ body.dark-theme {
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.03125em;
+  letter-spacing: 0.03em;
 }
 
-/* pattern styles for hidden elemen */
+/* pattern styles for hidden elements */
 .visually-hidden {
   position: absolute;
   width: 1px;
