@@ -20,7 +20,7 @@
       <path stroke-linecap="round" stroke-width="2.667" d="m24 12-8 8-8-8"/>
     </symbol>
     <symbol id="icon-arrow-r-u" viewBox="0 0 32 32">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M6.333 25.667 25.666 6.334m.001-.001h-18m18 0v18"/>
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M6.333 25.667l19.333-19.333M25.667 6.333h-18M25.667 6.333v18"></path>
     </symbol>
     <symbol id="icon-arrow-u" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-width="2.667" d="m24 20-8-8-8 8"/>
@@ -44,7 +44,8 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.454" d="M1.818 8.364c0 12.049 9.769 21.818 21.818 21.818h3.273a3.272 3.272 0 0 0 3.273-3.273v-1.996c0-.751-.511-1.405-1.239-1.587l-6.433-1.609c-.64-.16-1.312.08-1.706.607l-1.411 1.881c-.41.547-1.119.788-1.76.553a17.502 17.502 0 0 1-10.39-10.39c-.236-.641.006-1.35.553-1.76l1.881-1.411a1.634 1.634 0 0 0 .607-1.706L8.675 3.058a1.633 1.633 0 0 0-1.587-1.24H5.092a3.272 3.272 0 0 0-3.273 3.273v3.273z"/>
     </symbol>
     <symbol id="icon-x" viewBox="0 0 32 32">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24 8 8 24M8 8l16 16"/>
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M24 8l-16 16"></path>
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 8l16 16"></path>
     </symbol>
   </defs>
 </svg>
