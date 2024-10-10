@@ -1,0 +1,40 @@
+:root {
+  /** -------------------- FONTS -------------------- */
+
+  --ff-global-font: 'Poppins', sans-serif;
+  --ff-big-title-font: 'Impact', sans-serif;
+
+  /** --------------- COLORS LIGHT THEME --------------- */
+
+  --c-lt-body-bg: #f0f0f0;
+
+  --c-lt-text-main: #292929;
+
+  --c-lt-elem-accent: #00b068;
+  --c-lt-elem-effect: #009156;
+
+  --c-lt-elem-bg: #e4e5e6;
+  --c-lt-elem-bg-accent: #bcdfd1;
+  --c-lt-elem-bg-effect: #bbbbbb;
+
+  --c-lt-error: #e74a3b;
+
+  /** --------------- COLORS DARK THEME --------------- */
+
+  --c-dt-body-bg: #1e2023;
+
+  --c-dt-text-main: #f0f0f0;
+
+  --c-dt-elem-accent: #14c57c;
+  --c-dt-elem-effect: #009156;
+
+  --c-dt-elem-bg: #2a2d32;
+  --c-dt-elem-bg-accent: #204136;
+  --c-dt-elem-bg-effect: #3b3f45;
+
+  --c-dt-error: #e74a3b;
+
+  /** -------------------- OTHER -------------------- */
+
+  --trn-main-transition-params: 340ms cubic-bezier(0.39, 0.46, 0.02, 0.86);
+}

@@ -1,32 +1,126 @@
-:root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
+  font-family: var(--ff-global-font);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.03125em;
+  background-color: var(--c-lt-body-bg);
+  color: var(--c-lt-text-main);
 }
 
-main {
-  flex-grow: 1;
+body.dark-theme {
+  background-color: var(--c-dt-body-bg);
+  color: var(--c-dt-text-main);
 }
-main:has(.back-link) {
-  text-align: center;
+
+/** TEXT STYLES */
+
+/* h1 */
+.main-title {
+  font-family: var(--ff-big-title-font);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.028125em;
+  text-transform: uppercase;
+}
+
+/* h2 */
+.section-title {
+  font-family: var(--ff-big-title-font);
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2308;
+  letter-spacing: 0.03462em;
+  text-transform: uppercase;
+}
+
+/* h3 */
+.section-subtitle {
+  font-family: var(--ff-global-font);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.015625em;
+  text-transform: uppercase;
+}
+
+/* accent bigger text */
+.caption-text {
+  font-family: var(--ff-global-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5556;
+  letter-spacing: 0.02777em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 136px;
+    line-height: 1.1471;
+    letter-spacing: 0.01324em;
+  }
+
+  .section-title {
+    font-size: 108px;
+    line-height: 1.2308;
+    letter-spacing: 0.03462em;
+  }
+
+  .section-subtitle {
+    font-size: 36px;
+    line-height: 1.3333;
+    letter-spacing: 0.01389em;
+  }
+
+  .caption-text {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.025em;
+  }
+}
+
+/** ELEM STYLES */
+
+/* main btn styles in 'MY PROJECTS' and 'WORK TOGETHER' sections */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+
+  font-family: var(--ff-global-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.03125em;
+}
+
+/* pattern styles for hidden elemen */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* lock scroll for modal and burger */
+.scroll-lock {
+  overflow: hidden;
 }
