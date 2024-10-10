@@ -69,7 +69,8 @@ body.dark-theme {
   .section-title {
     font-size: 108px;
     line-height: 1.23;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
+
   }
 
   .section-subtitle {
