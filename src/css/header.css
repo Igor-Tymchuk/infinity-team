@@ -21,7 +21,7 @@
     color: var(--c-lt-text-main);
 }
 
-.header-logo span {
+.header-logo-span {
     color: var(--c-lt-elem-accent);
 }
 
