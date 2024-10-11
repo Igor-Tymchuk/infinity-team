@@ -1,11 +1,5 @@
 .work {
-  /* padding-top: 76; */
   padding-bottom: 80px;
-}
-
-.work-container {
-}
-.section-title {
 }
 
 .work-title {
@@ -62,9 +56,6 @@
   width: auto;
 }
 
-.work-contact-link {
-}
-
 .work-form {
   display: flex;
   gap: 32px;
@@ -74,9 +65,6 @@
 .work-form-elem {
   display: flex;
   flex-direction: column;
-}
-
-.work-label {
 }
 
 .work-input {
@@ -163,7 +151,6 @@
 
 @media screen and (min-width: 768px) {
   .work {
-    /* padding-top: 120px; */
     padding-bottom: 124px;
   }
 
@@ -174,9 +161,10 @@
       url('/images/work-decor-bg-2x.png') 2x
     );
     background-repeat: no-repeat;
-    background-position: top -120px, right;
+    background-position: top right;
     background-size: 336px 260px;
     z-index: 2;
+    padding-top: 120px;
   }
 
   .work-title {
@@ -209,7 +197,6 @@
 
 @media screen and (min-width: 1280px) {
   .work {
-    /* padding-top: 160px; */
     padding-bottom: 164px;
   }
 
@@ -219,9 +206,10 @@
       url('/images/work-decor-bg-desk-2x.png') 2x
     );
     background-repeat: no-repeat;
-    background-position: top -124px right;
-    position: relative;
+    background-position: top right;
+    background-size: 526px 408px;
     z-index: 2;
+    padding-top: 160px;
   }
 
   .work-auxiliary {
@@ -327,42 +315,3 @@
     letter-spacing: 0.03em;
   }
 }
-
-/* .work-modal-red {
-  position: absolute;
-  border: 1px solid var(--c-lt-elem-bg);
-  border-radius: 16px;
-  padding: 48px 48px;
-  width: 320px;
-  height: 328px;
-  background-color: var(--c-dt-text-main);
-}
-
-.work-modal-title-red {
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--c-dt-error);
-  margin-bottom: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .work-modal-red {
-    border-radius: 16px;
-    padding: 64px;
-    width: 492px;
-    height: 280px;
-  }
-
-  .work-modal-title-red {
-    font-size: 20px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
-  }
-
-  .work-modal-text-b {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-  }
-} */
