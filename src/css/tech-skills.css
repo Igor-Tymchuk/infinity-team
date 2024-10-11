@@ -1,0 +1,72 @@
+.tech-container {
+    overflow: hidden;
+    padding: 0;
+    height: 244px;
+}
+.tech-skills-first-box {
+    background-color: var(--c-lt-elem-bg-accent);
+    display: flex;
+    z-index: 1;
+}
+.tech-skills-second-box {
+    display: flex;
+    transform: rotate(2deg);
+}
+.tech-skills-second-box .tech-skill {
+    color: var(--c-lt-elem-accent);
+        background-color: var(--c-lt-elem-bg);
+}
+.tech-skills-second-box .tech-skill::before {
+    background-color: var(--c-lt-text-main);
+}
+.tech-skills-list {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    margin: 0;
+    min-width: 100%;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+}
+.tech-skills-second-box .tech-skills-list {
+    animation: reverseScroll 20s linear infinite;
+}
+.tech-skill {
+    position: relative;
+    padding: 32px 28px;
+}
+@media only screen and (min-width: 768px) {
+    .tech-container {
+        height: 280px;
+    }
+    .tech-skill {
+        padding: 40px 28px;
+    }
+}
+.tech-skill::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--c-lt-elem-accent);
+    left: -4px;
+    top: 50%;
+    border-radius: 2px;
+    transform: translateY(-50%);
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes reverseScroll {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
