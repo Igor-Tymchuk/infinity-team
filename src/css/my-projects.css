@@ -1,5 +1,6 @@
-.section-title {
+.my-projects-title {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .projects-title {
@@ -7,6 +8,8 @@
 }
 
 .projects-img-list {
+    width: 100%;
+    height: auto;
     margin-bottom: 12px;
 }
 
@@ -20,12 +23,13 @@
     margin-bottom: 16px;
 }
 
-.section-subtitle {
+.projects-name {
     margin-bottom: 16px;
 }
 
 .projects-arrow-svg {
     margin-left: 12px;
+    stroke: var(--c-lt-elem-accent);
 }
 
 .projects-btn-container {
@@ -90,3 +94,82 @@
     display: inline-block;
     background-color: #00b068;
 }
+
+
+/* ************ Tablet Adaptive ************ */
+
+@media only screen and (min-width: 768px) {
+.container {
+    max-width: 768px;
+    padding: 0 32px;
+}
+
+.section-title {
+    font-size: 108px;
+    line-height: 1.2308;
+    letter-spacing: 0.01667em;
+}
+
+.section-subtitle {
+    font-size: 36px;
+    line-height: 1.3333;
+    letter-spacing: 0.01389em;
+}
+
+.projects-subtitle {
+    margin-bottom: 20px;
+}
+
+.projects-img-list {
+    margin-bottom: 16px;
+}
+
+.projects-name {
+    margin-bottom: 60px;
+}
+
+.wallet-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-btn-container {
+    margin-left: auto;
+}
+}
+
+/* ************************ */
+
+
+/* ********* Dekstop adaptive ********** */
+
+
+@media only screen and (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    .my-projects-container {
+        padding-bottom: 48px;
+    }
+
+    .projects-name {
+        font-family: var(--ff-global-font);
+        font-size: 36px;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: var(--c-lt-text-main);
+        margin-bottom: 80px;
+    }
+
+    .projects-img-list {
+        margin-bottom: 16px;
+    }
+    
+    .projects-subtitle {
+        margin-bottom: 20px;
+    }
+}
+
+/* ********************* */
