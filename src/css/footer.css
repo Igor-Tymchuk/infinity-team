@@ -28,10 +28,6 @@
 }
 
 .footer-social-item {
-  font-family: var(--ff-global-font);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
 }
 
 .footer-social-link {
@@ -45,13 +41,9 @@
 }
 
 .footer-copyright-text {
-  font-family: var(--ff-global-font);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
   color: var(--c-lt-text-main);
   text-align: center;
-  max-width: 199px;
+  max-width: 200px;
   margin: 0 auto;
 }
 
