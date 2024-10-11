@@ -1,9 +1,8 @@
 .work {
+  /* padding-top: 76; */
   padding-bottom: 80px;
 }
 
-.container {
-}
 .work-container {
 }
 .section-title {
@@ -62,6 +61,7 @@
 .work-icon-svg {
   width: auto;
 }
+
 .work-contact-link {
 }
 
@@ -75,6 +75,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .work-label {
 }
 
@@ -85,6 +86,7 @@
   width: 100%;
   height: 48px;
   background: var(--c-lt-elem-bg);
+  padding-right: 40px;
 }
 
 .work-input::placeholder {
@@ -95,7 +97,34 @@
   color: var(--c-lt-text-main);
 }
 
-.visually-hidden {
+.work-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.work-icon-email {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: none;
+  stroke-width: 2px;
+  stroke: var(--c-lt-elem-bg);
+  border-radius: 50%;
+  background-color: var(--c-lt-elem-accent);
+}
+
+.hidden {
+  /* display: none; */
+}
+
+.work-error-message {
+  /* display: none; */
+  color: var(--c-dt-error);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
 }
 
 .work-modal-text {
@@ -116,18 +145,10 @@
   color: var(--c-lt-text-main);
 }
 
-.btn {
-}
 .work-btn {
-  border-radius: 8px;
-  padding: 12px 24px;
   width: 100%;
   height: 48px;
   background: var(--c-lt-elem-accent);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
   text-align: center;
   color: var(--c-dt-text-main);
 }
@@ -142,17 +163,19 @@
 
 @media screen and (min-width: 768px) {
   .work {
+    /* padding-top: 120px; */
     padding-bottom: 124px;
   }
 
   .work-container {
+    position: relative;
     background-image: image-set(
-      url('../images/work-decor-bg-1x.png') 1x,
-      url('../images/work-decor-bg-2x.png') 2x
+      url('/images/work-decor-bg-1x.png') 1x,
+      url('/images/work-decor-bg-2x.png') 2x
     );
     background-repeat: no-repeat;
-    background-position: top -124px right;
-    position: relative;
+    background-position: top -120px, right;
+    background-size: 336px 260px;
     z-index: 2;
   }
 
@@ -186,13 +209,14 @@
 
 @media screen and (min-width: 1280px) {
   .work {
+    /* padding-top: 160px; */
     padding-bottom: 164px;
   }
 
   .work-container {
     background-image: image-set(
-      url('../images/work-decor-bg-desk-1x.png') 1x,
-      url('../images/work-decor-bg-desk-2x.png') 2x
+      url('/images/work-decor-bg-desk-1x.png') 1x,
+      url('/images/work-decor-bg-desk-2x.png') 2x
     );
     background-repeat: no-repeat;
     background-position: top -124px right;
@@ -225,6 +249,8 @@
     margin-bottom: 0;
   }
 }
+
+/* -------------MODAL---------------- */
 
 .backdrop {
   width: 100%;

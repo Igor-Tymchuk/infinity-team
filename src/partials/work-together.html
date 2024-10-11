@@ -51,15 +51,21 @@
       <form class="work-form">
         <div class="work-form-elem">
           <label class="work-label visually-hidden" for="email"></label>
-          <input
-            class="work-input"
-            id="email"
-            type="email"
-            placeholder="Your email*"
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-            title="Email"
-            required
-          />
+          <div class="work-input-wrapper">
+            <input
+              class="work-input"
+              id="email"
+              type="email"
+              placeholder="Your email*"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              title="Email"
+              required
+            />
+            <svg class="work-icon-email hidden" width="16" height="16">
+              <use href="../images/icons.svg#icon-success"></use>
+            </svg>
+          </div>
+          <span class="work-error-message">Invalid email, try again</span>
         </div>
         <div class="work-form-elem">
           <label class="work-label visually-hidden" for="user-comment"></label>
