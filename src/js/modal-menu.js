@@ -6,13 +6,13 @@ const links = document.querySelectorAll('.mob-menu-list a');
 // Відкриття меню
 openBtn.onclick = () => {
   menu.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'auto';
 };
 
 // Закриття меню
 closeBtn.onclick = () => {
   menu.classList.remove('is-open');
-  document.body.style.overflow = 'auto';
+  document.body.style.overflow = 'hiden';
 };
 
 // Прокрутка до секції та закриття меню
@@ -23,7 +23,7 @@ links.forEach(link => {
     const targetSection = document.getElementById(targetId);
 
     menu.classList.remove('is-open');
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = 'hidden';
 
     window.scrollTo({
       top: targetSection.offsetTop,
