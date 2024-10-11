@@ -70,7 +70,7 @@
     align-items: center;
     background-color: var(--c-lt-body-bg);
     background-size: contain;
-    background-image: image-set url('../images/mobile-menu-bg-1x-top.png') 1x, url('../images/mobile-menu-bg-2x-top.png') 2x;
+    background-image: image-set url('/images/mobile-menu-bg-1x-top.png') 1x, url('/images/mobile-menu-bg-2x-top.png') 2x;
     background-position: right top, bottom center;
     background-repeat: no-repeat no-repeat;
 }
@@ -103,42 +103,6 @@
 .header-none{
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Чекбокс перемикання теми */
 .theme-checkbox {
