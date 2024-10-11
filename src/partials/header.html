@@ -1,11 +1,8 @@
 <header class="header">
     <div class="container header-container">
         <!--Лого-->
-
         <a class="header-logo-link" href="./index.html">LLOYD<span class="header-logo-span">JEFFERSON.</span></a>
-
         <!--Кнопка зміни теми-->
-
         <input type="checkbox" class="header-theme-checkbox theme-checkbox" id="change-theme" />
         <label for="change-theme" class="visually-hidden">Change theme</label>
         <nav class="header-navigation">
@@ -14,28 +11,26 @@
                 <li class="header-item"><a href="#my-projects" class="link-hover" aria-label = "go to section Projects">Projects</a></li>
                 <li class="header-item"><a href="#contacts" class="link-hover" aria-label = "go to section Contacs">Contacts</a></li>
             </ul>
-
         <!--Кнопка відкриття модального меню-->
-
             <button type="button" class="open-menu-btn">
                 <span class="visually-hidden">Open menu</span>
-                <svg class="icon-open-menu" width="32" height="32"><use href="./images/icons.svg#icon-menu"></use></svg>
+                <svg class="icon-open-menu" width="32" height="32"><use href="../images/icons.svg#icon-menu"></use></svg>
             </button>
         </nav>
     </div>
-
-    <!--Модальне меню моб. версії-->
+    <!-- Модальне меню-->
     <div class="mob-menu-container">
+        <!--Кнопка закриття модального меню-->
+         <button type="button" class="close-menu-btn">
+            <span class="visually-hidden">Close menu</span><svg width="32" height="32" class="icon-close-btn">
+            <use href="../images/icons.svg#icon-x"></use></svg></button>
         <nav class="mob-menu-navigation">
-            <button type="button" class="close-menu-btn">
-                <span class="visually-hidden">Close menu</span>
-                <svg width="32" height="32" class="icon-close-btn"><use href="./images/sprite.svg#icon-x"></use></svg>
-            </button>
-        </nav>
+        <!-- Навігація по моб. меню-->
         <ul class="mob-menu-list">
             <li class="mob-menu-item"><a href="#about" class="link-hover" aria-label="go to section About me">About me</a></li>
             <li class="mob-menu-item"><a href="#my-projects" class="link-hover" aria-label="go to section Projects">Projects</a></li>
             <li class="mob-menu-item"><a href="#contacts" class="link-hover" aria-label="go to section Contacts">Contacts</a></li>
         </ul>
+        </nav>
     </div>
 </header>

@@ -32,6 +32,10 @@
     display: none;
 }
 
+
+
+
+
 .open-menu-btn {
     border: none;
     line-height: 0;
@@ -41,48 +45,56 @@
 }
 
 .mob-menu-container {
-    display: flex;
-    flex-direction: column;
+    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 10;
+    right: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
-    z-index: 10;
-    background-color: var(--c-lt-body-bg); 
-    opacity: 0;
-    /* visibility: hidden; */
-    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
-    transition: var(--trn-main-transition-params);
+    background-repeat: no-repeat;
+    
 }
 
-.list-wrap {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mob-menu-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.mob-menu-container.active {
+    display: block;
+    transform: translateX(0);
 }
 
 .mob-menu-list {
+    height: 100vh;
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 24px;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/);
+    background-color: var(--c-lt-body-bg);
+    background-image: url('../images/mobile-burger-stars-bg-up.png'), url('../images/mobile-burger-stars-bg-down.png');
     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: right top, bottom center;
+    background-repeat: no-repeat no-repeat;
+    
+}
+
+.mob-menu-item {
+    margin-bottom: 20px;
+}
+
+.mob-menu-item a {
+    color: var(--c-lt-text-main);
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.mob-menu-item a:hover {
+    color: var(--c-dt-elem-accent);
 }
 
 .close-menu-btn {
@@ -93,6 +105,46 @@
     stroke: var(--c-dt-elem-bg);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Чекбокс перемикання теми */
 .theme-checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -104,7 +156,6 @@
     background-color: #E4E5E6;
     border-radius: 16px;
     transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-
     &::before,
     &::after {
         content: '';
@@ -117,16 +168,13 @@
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
             opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     &::before {
         background-color: var(--c-dt-body-bg);
         opacity: 0;
     }
-
     &::after {
         background-color: var(--c-dt-elem-accent);
     }
-
     &:checked {
         background-color: var(--c-dt-body-bg);
 
@@ -142,6 +190,7 @@
         }
     }
 }
+
 
 @media screen and (min-width: 768px) {
     .header {
@@ -173,9 +222,3 @@
         margin: 0 40px 0 auto;
     }
 }
-
-/* @media screen and (min-width: 768px) {
-        .header-logo-link {
-                font-size: 32px;
-            }
-} */
