@@ -29,10 +29,14 @@ body {
 }
 
 .section-title {
-    font-size: 1.8em;
-    text-align: left;
-    margin-bottom: 40px;
-}
+    font-family: var(--ff-big-title-font);
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2308;
+    letter-spacing: 0.03462em;
+    text-transform: uppercase;
+  }
 
 .span-me {
     color: var(--c-lt-elem-accent);
