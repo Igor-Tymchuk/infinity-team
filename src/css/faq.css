@@ -51,6 +51,7 @@
     border-radius: 8px;
     padding: 8px;
     stroke: #292929;
+    fill: none;
     position: absolute;
     top: -6px;
     left: 60%;
