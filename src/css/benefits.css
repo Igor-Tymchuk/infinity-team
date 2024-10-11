@@ -1,9 +1,85 @@
+.benefits-title {
+  /* float: left; */
+  height: fit-content;
+}
+
 .benefits-title span {
   color: var(--c-lt-elem-accent);
 }
 
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.benefits-item {
+  /* TODO remove fixed sizes */
+
+  height: 184px;
+  width: 384px;
+  /* margin-bottom: 8px; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.benefits-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: var(--c-lt-elem-bg-accent);
+  border-radius: 8px;
+}
+
 @media only screen and (min-width: 1280px) {
+  .benefits-section {
+    padding-bottom: 164px;
+  }
+
+  .benefits-section .container {
+    padding-top: 116px;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    background-image: url(../images/benefits-stars-bg-desk.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
   .benefits-title {
     max-width: 682px;
+  }
+
+  /* .benefits-list.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 32px;
+} */
+
+  /* .grid-item1 {
+  grid-column: 3 / 4;
+  grid-row: 1;
+}
+
+.grid-item2 {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.grid-item3 {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+
+.grid-item4 {
+  grid-column: 3 / 4;
+  grid-row: 2;
+} */
+
+  .benefits-list {
+    margin-top: 276px;
   }
 }
