@@ -1,14 +1,16 @@
 .background-decor {
     padding: 96px 0 0 0;
-    background-image: url(/images/hero-decor-bg-mobil.png);
+    background-image: url(/images/header-stars-mob-up.png),
+                      url(/images/header-stars-mob-down.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-
+    background-position: top 20px right 10px, right 45px bottom 192px;
 }
 .hero-title-box {
     display: flex;
     margin-bottom: 40px;
+}
+.main-title {
+    color: var(--c-lt-elem-accent);
 }
 .hero-img-box {
     border-radius: 32px;
@@ -21,28 +23,17 @@
     display: inline-block;
     border-radius: 16px;
     top: 0;
-    right: -10px;
-width: 165px;
-height: 92px;
-background-color: var(--c-lt-elem-bg-accent);
-transition-property: all;
-transition-duration: 1s;
-transition: var(--trn-main-transition-params);
+    right: 35px;
+    width: 165px;
+    height: 92px;
+    background-color: var(--c-lt-elem-bg-accent);
+    transition-property: all;
+    transition-duration: 1s;
+    transition: var(--trn-main-transition-params);
 }
 
-h1 {
-font-family: var(--ff-big-title-font); 
-font-weight: 400;
-font-size: 64px;
-line-height: 1.25;
-letter-spacing: 0.029em;
-text-transform: uppercase;
-color: var(--c-lt-elem-accent); 
-
-}
-
-h1 span {
-color: #000;
+.main-title span {
+    color: var(--c-lt-text-main);
 }
 
 .button-box {
@@ -50,21 +41,22 @@ color: #000;
     max-width: 416px;
 }
 .button {
-position: relative;
-font-family: var(--ff-global-font); 
-font-weight: 400;
-font-size: 18px;
-line-height: 156%;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: #000;
-margin-bottom: 40px;
-padding: 32px 50px 32px 45px;
-border-radius: 16px;
-background-color: transparent;
-outline: none;
-border: none;
-z-index: 1;
+    position: relative;
+    display: block;
+    font-family: var(--ff-global-font); 
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 40px;
+    padding: 32px 50px 32px 45px;
+    border-radius: 16px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    z-index: 1;
 }
 
 .button-box:hover .rect {
@@ -87,23 +79,18 @@ z-index: 1;
     stroke: var(--c-lt-elem-accent);
 }
 
-.hero-description {
-font-weight: 400;
-font-size: 18px;
-line-height: 156%;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: #000;
-padding-bottom: 56px;
+.section-hero .caption-text {
+    padding-bottom: 72px;
 }
 
-.hero-description .decor {
+.section-hero .caption-text .decor {
     color: var(--c-lt-elem-accent);
 }
 
 .wraper-contact-list {
-background-color: var(--c-lt-elem-bg);
-padding: 32px 0;
+    background-color: var(--c-lt-elem-bg);
+    padding: 32px 0;
+    margin: 0;
 }
 
 .contact-list {
@@ -116,45 +103,40 @@ padding: 32px 0;
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
     .background-decor {
-        background-image: url(/images/hero-decor-bg-tablet.png);
+        padding-top: 88px;
+        background-image: url(/images/header-stars-tablet-up.png),
+        url(/images/header-stars-tablet-down.png);
+        background-position: top 20px right 10px, left 107px bottom 132px;
     }
     .hero-title-box {
         margin-bottom: 60px;
     }
-    
     .rect {   
-    width: 261px;
-    right: 0;
-  }
-  h1 {
-    font-size: 136px;
-  
-  }
-  .button {
-    font-size: 20px;
-    line-height: 160%;
-  }
-  .arrow-button {
-    top: -28px;
-  }
-  .contact-list {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .background-decor {
-    padding: 72px 0 0 0;
-}
-.hero-description {
-    font-size: 20px;
-    line-height: 160%;
-    padding-bottom: 64px;
-}
+        width: 261px;
+        right: 0;
+    }
+ 
+    .button {
+        font-size: 20px;
+        line-height: 160%;
+    }
+    .arrow-button {
+        top: -28px;
+    }
+    .section-hero .caption-text {
+        padding-bottom: 104px;
+    }
+    .contact-list {
+        justify-content: center;
+        flex-direction: row;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
     .background-decor {
-        padding-top: 88px;
-        background-image: url(/images/hero-decor-bg-desktop.png);
+        background-image: url(/images/header-stars-desk-up.png),
+        url(/images/header-stars-desk-down.png);
+        background-position: top 10px right 10px, left 126px bottom 22px;
         }
     .hero-title-box {
         justify-content: space-between;
@@ -163,12 +145,7 @@ padding: 32px 0;
     .hero-img-box {
         display: block;
         overflow: hidden;
-    }
-    h1 {
-        font-size: 124px;
-        line-height: 1.19355;
-        letter-spacing: 0.01em;
-        max-width: 552px;
+        flex-shrink: 0;
     }
     .hero-content {
         display: flex;
@@ -180,8 +157,8 @@ padding: 32px 0;
     .button {
         margin-bottom: 0;
     }
-    .hero-description {
+    .caption-text {
         width: 592px;
-        padding-bottom: 80px;
+        padding-bottom: 96px;
     }
   }
