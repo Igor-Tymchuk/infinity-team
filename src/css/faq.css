@@ -56,3 +56,49 @@
     left: 60%;
     outline: none;
 }
+
+@media screen and (min-width: 768px) {
+    .question-close {
+        max-width: 544px;
+    }
+
+    #faq-icon {
+        left: 70%;
+    }
+
+    .ac-panel {
+        max-width: 544px;
+    }
+
+}
+
+@media(min-width: 1280px) {
+    .faq-section {
+        padding-bottom: 164px;
+    }
+
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        background-image: url('/images/faq-bg1x.png');
+        background-size: 526px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+    }
+
+    @media(min-width: 320p) and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .wrap {
+            background-image: url('/images/faq-bg.png');
+        }
+    }
+
+    .accordion-container {
+        margin-left: 50%;
+    }
+
+    #ac {
+        width: 520px;
+    }
+}
