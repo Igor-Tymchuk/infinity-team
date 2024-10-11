@@ -1,33 +1,17 @@
-const menu = document.querySelector('.mob-menu-container');
-const openBtn = document.querySelector('.open-menu-btn');
-const closeBtn = document.querySelector('.close-menu-btn');
-const links = document.querySelectorAll('.mob-menu-list a');
+const openMenuBtn = document.querySelector('.open-menu-btn');
+const closeMenuBtn = document.querySelector('.close-menu-btn');
+const mobMenuContainer = document.querySelector('.mob-menu-container');
 
-// Відкриття меню
-openBtn.onclick = () => {
-  menu.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
-};
+// Відкрити меню
+    openMenuBtn.addEventListener('click', () => {
+    mobMenuContainer.classList.add('active');
+    mobMenuContainer.style.display = 'block'; // Відображення меню
+});
 
-// Закриття меню
-closeBtn.onclick = () => {
-  menu.classList.remove('is-open');
-  document.body.style.overflow = 'auto';
-};
-
-// Прокрутка до секції та закриття меню
-links.forEach(link => {
-  link.onclick = (event) => {
-    event.preventDefault();
-    const targetId = link.getAttribute('href').slice(1);
-    const targetSection = document.getElementById(targetId);
-
-    menu.classList.remove('is-open');
-    document.body.style.overflow = 'auto';
-
-    window.scrollTo({
-      top: targetSection.offsetTop,
-      behavior: 'smooth',
-    });
-  };
+// Закрити меню при натисканні на close-menu-btn
+    closeMenuBtn.addEventListener('click', () => {
+    mobMenuContainer.classList.remove('active');
+    setTimeout(() => {
+        mobMenuContainer.style.display = 'none'; // Приховуємо після анімації
+    }, 300); // Тайм-аут для завершення анімації
 });
