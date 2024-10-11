@@ -1,73 +1,141 @@
 <section>
-  <div class="container">
-    <h2 class="section-title">
+  <div class="container my-projects-container">
+    <h2 class="section-title my-projects-title">
       My <span class="projects-title">projects</span>
     </h2>
     <ul>
       <li>
-        <img
-          class="projects-img-list"
-          src="/images/finances-mob.webp"
-          alt="projects"
-        />
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="/images/finances.webp 1x, /images/finances-x2.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              /images/finances-tab.webp    1x,
+              /images/finances-tab-x2.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              /images/finances-mob.webp    1x,
+              /images/finances-mob-x2.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            class="projects-img-list"
+            src="/images/finances-mob.webp"
+            alt="My Projects"
+            loading="lazy"
+          />
+        </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <h3 class="section-subtitle">Wallet webservice</h3>
-        <div class="projects-btn-container">
-          <a
-            href="https://github.com/Igor-Tymchuk/infinity-team"
-            target="_blank"
-          >
-            <button class="projects-visiting-btn">
-              VISIT
-              <svg class="projects-arrow-svg" width="24px" height="24px">
-                <use href="/images/icons.svg#icon-arrow-r-u"></use>
-              </svg>
-            </button>
-          </a>
+        <div class="wallet-container">
+          <h3 class="section-subtitle projects-name">Wallet webservice</h3>
+          <div class="projects-btn-container">
+            <a
+              href="https://github.com/Igor-Tymchuk/infinity-team"
+              target="_blank"
+            >
+              <button class="projects-visiting-btn">
+                VISIT
+                <svg class="projects-arrow-svg" width="24px" height="24px">
+                  <use href="/images/icons.svg#icon-arrow-r-u"></use>
+                </svg>
+              </button>
+            </a>
+          </div>
         </div>
       </li>
       <li>
-        <img
-          class="projects-img-list"
-          src="/images/organic-mob.webp"
-          alt="projects"
-        />
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="/images/organic.webp 1x, /images/organic-x2.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/images/organic-tab.webp 1x, /images/organic-tab-x2.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/images/organic-mob.webp 1x, /images/organic-mob-x2.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="projects-img-list"
+            src="/images/organic-mob.webp"
+            alt="My projects"
+          />
+        </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <h3 class="section-subtitle">Green harvest webservice</h3>
-        <div class="projects-btn-container">
-          <a
-            href="https://github.com/Igor-Tymchuk/infinity-team"
-            target="_blank"
-          >
-            <button class="projects-visiting-btn">
-              VISIT
-              <svg class="projects-arrow-svg" width="24px" height="24px">
-                <use href="/images/icons.svg#icon-arrow-r-u"></use>
-              </svg>
-            </button>
-          </a>
+        <div class="wallet-container">
+          <h3 class="section-subtitle projects-name">
+            Green harvest webservice
+          </h3>
+          <div class="projects-btn-container">
+            <a
+              href="https://github.com/Igor-Tymchuk/infinity-team"
+              target="_blank"
+            >
+              <button class="projects-visiting-btn">
+                VISIT
+                <svg class="projects-arrow-svg" width="24px" height="24px">
+                  <use href="/images/icons.svg#icon-arrow-r-u"></use>
+                </svg>
+              </button>
+            </a>
+          </div>
         </div>
       </li>
       <li>
-        <img
-          class="projects-img-list"
-          src="/images/eng-mob.webp"
-          alt="projects"
-        />
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="/images/eng.webp 1x, /images/eng-x2.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/images/eng-tab.webp 1x, /images/eng-tab-x2.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/images/eng-mob.webp 1x, /images/eng-mob-x2.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="projects-img-list"
+            src="/images/eng-mob.webp"
+            alt="projects"
+          />
+        </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <h3 class="section-subtitle">English Exellence website</h3>
-        <div class="projects-btn-container">
-          <a
-            href="https://github.com/Igor-Tymchuk/infinity-team"
-            target="_blank"
-          >
-            <button class="projects-visiting-btn">
-              VISIT
-              <svg class="projects-arrow-svg" width="24px" height="24px">
-                <use href="/images/icons.svg#icon-arrow-r-u"></use>
-              </svg>
-            </button>
-          </a>
+        <div class="wallet-container">
+          <h3 class="section-subtitle projects-name">
+            English Exellence website
+          </h3>
+          <div class="projects-btn-container">
+            <a
+              href="https://github.com/Igor-Tymchuk/infinity-team"
+              target="_blank"
+            >
+              <button class="projects-visiting-btn">
+                VISIT
+                <svg class="projects-arrow-svg" width="24px" height="24px">
+                  <use href="/images/icons.svg#icon-arrow-r-u"></use>
+                </svg>
+              </button>
+            </a>
+          </div>
         </div>
       </li>
     </ul>
