@@ -35,7 +35,7 @@ body {
     margin-bottom: 40px;
 }
 
-.span-me {
+.span-about {
     color: var(--c-lt-elem-accent);
 }
 
@@ -46,7 +46,7 @@ body {
     margin-bottom: 32px;
 }
 
-.bio {
+.about-bio {
     margin-top: 40px;
 }
 
@@ -58,7 +58,7 @@ body {
     margin-bottom: 24px;
 }
 
-.education {
+.about-education {
     margin-top: 40px;
 }
 
@@ -70,7 +70,7 @@ body {
     margin-bottom: 12px;
 }
 
-.role {
+.about-role {
     margin-top: 40px;
 }
 
