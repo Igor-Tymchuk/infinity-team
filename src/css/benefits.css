@@ -1,3 +1,7 @@
+/* TODO make responsive bg images */
+/* TODO add icons */
+/* TODO make tablet and mobile */
+
 .benefits-title {
   /* float: left; */
   height: fit-content;
@@ -17,8 +21,8 @@
 .benefits-item {
   /* TODO remove fixed sizes */
 
-  height: 184px;
-  width: 384px;
+  /* height: 184px;
+  width: 384px; */
   /* margin-bottom: 8px; */
   display: flex;
   flex-direction: column;
@@ -46,38 +50,42 @@
     background-image: url(../images/benefits-stars-bg-desk.png);
     background-repeat: no-repeat;
     background-position: right top;
+    position: relative;
   }
 
   .benefits-title {
     max-width: 682px;
+    position: absolute;
+    top: 116px;
+    left: 32px;
   }
 
-  /* .benefits-list.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 32px;
-} */
+  .benefits-list.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 32px;
+  }
 
-  /* .grid-item1 {
-  grid-column: 3 / 4;
-  grid-row: 1;
-}
+  .grid-item1 {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
 
-.grid-item2 {
-  grid-column: 1 / 2;
-  grid-row: 2;
-}
+  .grid-item2 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
 
-.grid-item3 {
-  grid-column: 2 / 3;
-  grid-row: 2;
-}
+  .grid-item3 {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
 
-.grid-item4 {
-  grid-column: 3 / 4;
-  grid-row: 2;
-} */
+  .grid-item4 {
+    grid-column: 3 / 4;
+    grid-row: 2;
+  }
 
   .benefits-list {
     margin-top: 276px;
