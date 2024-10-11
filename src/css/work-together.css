@@ -145,6 +145,17 @@
     padding-bottom: 124px;
   }
 
+  .work-container {
+    background-image: image-set(
+      url('../images/work-decor-bg-1x.png') 1x,
+      url('../images/work-decor-bg-2x.png') 2x
+    );
+    background-repeat: no-repeat;
+    background-position: top -124px right;
+    position: relative;
+    z-index: 2;
+  }
+
   .work-title {
     margin-bottom: 60px;
   }
@@ -176,6 +187,17 @@
 @media screen and (min-width: 1280px) {
   .work {
     padding-bottom: 164px;
+  }
+
+  .work-container {
+    background-image: image-set(
+      url('../images/work-decor-bg-desk-1x.png') 1x,
+      url('../images/work-decor-bg-desk-2x.png') 2x
+    );
+    background-repeat: no-repeat;
+    background-position: top -124px right;
+    position: relative;
+    z-index: 2;
   }
 
   .work-auxiliary {
@@ -219,7 +241,7 @@
   position: absolute;
   border: 1px solid var(--c-lt-elem-bg);
   border-radius: 16px;
-  padding: 48px 32px;
+  padding: 48px 48px;
   width: 320px;
   height: 328px;
   background-color: var(--c-dt-text-main);
@@ -229,11 +251,17 @@
   position: absolute;
   top: 16px;
   right: 16px;
+  border: none;
+}
+
+.work-modal-use {
+  fill: none;
+  stroke-width: 2px;
+  stroke: var(--c-lt-text-main);
+  margin-right: 16px;
 }
 
 .work-text-conteiner {
-  width: 256px;
-  height: 232px;
 }
 
 .work-modal-title {
@@ -251,3 +279,64 @@
   text-align: center;
   color: var(--c-lt-text-main);
 }
+
+@media screen and (min-width: 768px) {
+  .work-modal {
+    border-radius: 16px;
+    padding: 64px;
+    width: 492px;
+    height: 280px;
+  }
+
+  .work-modal-title {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+
+  .work-modal-text-b {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+}
+
+/* .work-modal-red {
+  position: absolute;
+  border: 1px solid var(--c-lt-elem-bg);
+  border-radius: 16px;
+  padding: 48px 48px;
+  width: 320px;
+  height: 328px;
+  background-color: var(--c-dt-text-main);
+}
+
+.work-modal-title-red {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--c-dt-error);
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .work-modal-red {
+    border-radius: 16px;
+    padding: 64px;
+    width: 492px;
+    height: 280px;
+  }
+
+  .work-modal-title-red {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+
+  .work-modal-text-b {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+} */
