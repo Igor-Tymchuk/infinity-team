@@ -1,0 +1,164 @@
+:root {
+    --ff-global-font: 'Poppins', sans-serif;
+    --ff-big-title-font: 'Impact', sans-serif;
+    --c-lt-body-bg: #f0f0f0;
+    --c-lt-text-main: #292929;
+    --c-lt-elem-accent: #00b068;
+    --c-lt-elem-bg: #e4e5e6;
+    --c-lt-error: #e74a3b;
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-global-font);
+    background-color: var(--c-lt-body-bg);
+    color: var(--c-lt-text-main);
+    line-height: 1.6;
+    padding: 0;
+}
+
+.about-me {
+    padding: 20px;
+    margin: 0;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.about-title {
+    font-size: 1.8em;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.span-me {
+    color: var(--c-lt-elem-accent);
+}
+
+.profile-photo {
+    border-radius: 16px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 32px;
+}
+
+.bio {
+    margin-top: 40px;
+}
+
+.bio h3 {
+    margin-bottom: 32px;
+}
+
+.bio p {
+    margin-bottom: 24px;
+}
+
+.education {
+    margin-top: 40px;
+}
+
+.education h3 {
+    margin-bottom: 32px;
+}
+
+.education ul li {
+    margin-bottom: 12px;
+}
+
+.role {
+    margin-top: 40px;
+}
+
+.role h3 {
+    margin-bottom: 32px;
+}
+
+.role ul li {
+    margin-bottom: 12px;
+}
+
+
+@media (max-width: 360px) {
+    .about-title {
+        font-size: 1.6em;
+    }
+}
+
+
+@media (min-width: 360px) and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .about-title {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .profile-photo {
+        order: 1;
+        margin-bottom: 32px;
+    }
+    .bio {
+        order: 2;
+        position: absolute;
+        top: 0;
+        right: 32px;
+        width: 40%;
+        margin: 0;
+    }
+    .education {
+        order: 3;
+        margin-top: 32px;
+    }
+    .role {
+        order: 4;
+        margin-top: 32px;
+    }
+    .about-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .role, .education {
+        width: 45%;
+    }
+    .education {
+        margin-right: 10%;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .about-title {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
