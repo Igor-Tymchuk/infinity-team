@@ -3,12 +3,17 @@
 /* TODO make tablet and mobile */
 
 .benefits-title {
-  /* float: left; */
   height: fit-content;
 }
 
 .benefits-title span {
   color: var(--c-lt-elem-accent);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--c-lt-elem-accent);
+  background-image: url(/images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
 }
 
 .benefits-list {
@@ -23,7 +28,6 @@
 
   /* height: 184px;
   width: 384px; */
-  /* margin-bottom: 8px; */
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -32,8 +36,46 @@
 .benefits-icon-box {
   width: 48px;
   height: 48px;
-  background-color: var(--c-lt-elem-bg-accent);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: var(--c-lt-elem-bg-accent); */
+  background: linear-gradient(
+    127deg,
+    var(--c-lt-elem-bg-accent),
+    var(--c-lt-elem-bg),
+    var(--c-lt-elem-bg-accent),
+    var(--c-lt-elem-bg),
+    var(--c-lt-elem-bg-accent)
+  );
+  background-size: 160% 160%;
+  animation: gradientShift 5500ms ease infinite;
   border-radius: 8px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes back {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+.benefits-icon-box .benefits-icon {
+  stroke: var(--c-lt-elem-accent);
+  fill: transparent;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -43,11 +85,11 @@
 
   .benefits-section .container {
     padding-top: 116px;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     /* flex-direction: column; */
     justify-content: space-between;
-    background-image: url(../images/benefits-stars-bg-desk.png);
+    background-image: url(/images/benefits-stars-bg-desk.png);
     background-repeat: no-repeat;
     background-position: right top;
     position: relative;
