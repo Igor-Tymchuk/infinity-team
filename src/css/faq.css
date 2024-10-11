@@ -1,0 +1,24 @@
+.faq-section {
+
+    padding-bottom: 80px;
+    /*delete top*/
+}
+
+
+#ac {
+    border-bottom: 1px solid var(--c-lt-elem-bg);
+    padding: 28px 24px;
+    min-width: 320px;
+    min-height: 140px;
+    background-color: transparent;
+}
+
+.ac-header {
+    font-family: var(--ff-global-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55556;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--c-lt-text-main);
+}
