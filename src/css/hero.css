@@ -1,5 +1,5 @@
 .background-decor {
-    padding: 96px 0 56px 0;
+    padding: 96px 0 0 0;
     background-image: url(/images/hero-decor-bg-mobil.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -35,7 +35,7 @@ font-family: var(--ff-big-title-font);
 font-weight: 400;
 font-size: 64px;
 line-height: 1.25;
-letter-spacing: 0.03em;
+letter-spacing: 0.029em;
 text-transform: uppercase;
 color: var(--c-lt-elem-accent); 
 
@@ -80,7 +80,7 @@ z-index: 1;
 .arrow-button {
     position: absolute;
     left: 6px;
-    top: -31px;
+    top: -30px;
     font-size: 28px;
     fill: var(--c-lt-elem-accent);
     color: var(--c-lt-elem-accent);
@@ -94,6 +94,7 @@ line-height: 156%;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #000;
+padding-bottom: 56px;
 }
 
 .hero-description .decor {
@@ -141,17 +142,18 @@ padding: 32px 0;
     justify-content: center;
   }
   .background-decor {
-    padding: 72px 0 64px 0;
+    padding: 72px 0 0 0;
 }
 .hero-description {
     font-size: 20px;
     line-height: 160%;
+    padding-bottom: 64px;
 }
 }
 
 @media only screen and (min-width: 1280px) {
     .background-decor {
-        padding-bottom: 80px;
+        padding-top: 88px;
         background-image: url(/images/hero-decor-bg-desktop.png);
         }
     .hero-title-box {
@@ -180,5 +182,6 @@ padding: 32px 0;
     }
     .hero-description {
         width: 592px;
+        padding-bottom: 80px;
     }
   }
