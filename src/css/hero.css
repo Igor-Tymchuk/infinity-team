@@ -27,7 +27,7 @@
     width: 165px;
     height: 92px;
     background-color: var(--c-lt-elem-bg-accent);
-    transition-property: all;
+    transition-property: background-image 1s;
     transition-duration: 1s;
     transition: var(--trn-main-transition-params);
 }
@@ -65,7 +65,7 @@
 
 .button-box:focus .rect,
 .button-box:active .rect{
-    background: linear-gradient(60deg, var(--c-lt-elem-accent) 0%, var(--c-lt-elem-bg-accent) 36%, #fff 100%);
+    background-image: linear-gradient(60deg, var(--c-lt-elem-accent) 0%, var(--c-lt-elem-bg-accent) 36%, #fff 100%);
     opacity: 0.5;
 }
 
@@ -90,7 +90,6 @@
 .wraper-contact-list {
     background-color: var(--c-lt-elem-bg);
     padding: 32px 0;
-    margin: 0;
 }
 
 .contact-list {
@@ -136,7 +135,7 @@
     .background-decor {
         background-image: url(/images/header-stars-desk-up.png),
         url(/images/header-stars-desk-down.png);
-        background-position: top 10px right 10px, left 126px bottom 22px;
+        background-position: top -60px right 101px, left 126px bottom 45px;
         }
     .hero-title-box {
         justify-content: space-between;
@@ -160,5 +159,8 @@
     .caption-text {
         width: 592px;
         padding-bottom: 96px;
+    }
+    .wraper-contact-list {
+        padding: 40px 0;
     }
   }
