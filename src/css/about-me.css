@@ -1,22 +1,3 @@
-:root {
-    --ff-global-font: 'Poppins', sans-serif;
-    --ff-big-title-font: 'Impact', sans-serif;
-    --c-lt-body-bg: #f0f0f0;
-    --c-lt-text-main: #292929;
-    --c-lt-elem-accent: #00b068;
-    --c-lt-elem-bg: #e4e5e6;
-    --c-lt-error: #e74a3b;
-}
-
-body {
-    margin: 0;
-    font-family: var(--ff-global-font);
-    background-color: var(--c-lt-body-bg);
-    color: var(--c-lt-text-main);
-    line-height: 1.6;
-    padding: 0;
-}
-
 .about-me {
     padding: 0;
     margin: 0;
@@ -27,16 +8,6 @@ body {
     padding-bottom: 24px;
     border-top: 1px solid var(--c-lt-elem-bg);
 }
-
-.section-title {
-    font-family: var(--ff-big-title-font);
-    font-size: 52px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.2308;
-    letter-spacing: 0.03462em;
-    text-transform: uppercase;
-  }
 
 .span-me {
     color: var(--c-lt-elem-accent);
@@ -114,13 +85,6 @@ body {
     text-align: left;
 }
 
-/* Mobile Styles
-@media (max-width: 360px) {
-    .section-title {
-        font-size: 1.6em;
-    }
-} */
-
 /* Tablet Styles */
 @media only screen  and (min-width: 768px) {
     .about-container {
@@ -166,12 +130,6 @@ body {
         flex-wrap: wrap;
     }
 
-    .section-title {
-        font-size: 108px; 
-        font-weight: 500; 
-        line-height: 133%; 
-    }
-
     .profile-photo {
         margin-top: 408px; 
     }
@@ -202,22 +160,3 @@ body {
         margin-right: 10%;
     }
 }
-
-/* @media (min-width: 1280px) {
-    .about-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .section-title {
-        font-size: 2.2em;
-    }
-
-    h3 {
-        font-size: 1.8em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-} */
