@@ -32,16 +32,12 @@
     display: none;
 }
 
-
-
-
-
 .open-menu-btn {
     border: none;
     line-height: 0;
     background-color: transparent;
     padding: 0;
-    stroke: var(--c-dt-elem-bg-effect);
+    stroke: var(--c-lt-text-main);
 }
 
 .mob-menu-container {
@@ -73,11 +69,10 @@
     justify-content: center;
     align-items: center;
     background-color: var(--c-lt-body-bg);
-    background-image: url('../images/mobile-burger-stars-bg-up.png'), url('../images/mobile-burger-stars-bg-down.png');
     background-size: contain;
+    background-image: image-set url('/images/mobile-menu-bg-1x-top.png') 1x, url('/images/mobile-menu-bg-2x-top.png') 2x;
     background-position: right top, bottom center;
     background-repeat: no-repeat no-repeat;
-    
 }
 
 .mob-menu-item {
@@ -105,44 +100,9 @@
     stroke: var(--c-dt-elem-bg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.header-none{
+    display: none;
+}
 
 /* Чекбокс перемикання теми */
 .theme-checkbox {
