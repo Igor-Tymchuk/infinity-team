@@ -1,33 +1,28 @@
-/* TODO make responsive bg images */
-/* TODO add icons */
-/* TODO make tablet and mobile */
-
-.benefits-title {
-  height: fit-content;
-}
-
 .benefits-title span {
-  color: var(--c-lt-elem-accent);
   color: transparent;
-  -webkit-text-stroke: 1px var(--c-lt-elem-accent);
-  background-image: url(/images/back.png);
   -webkit-background-clip: text;
-  background-position: 0 0;
-  animation: back 20s linear infinite;
+  -webkit-text-stroke: 1px var(--c-lt-elem-accent);
+  background-image: linear-gradient(
+    60deg,
+    var(--c-lt-elem-accent) 0,
+    var(--c-lt-elem-accent) 75%,
+    var(--c-lt-elem-bg-accent) 80%,
+    var(--c-lt-elem-bg-accent) 84%,
+    var(--c-lt-elem-accent) 90%,
+    var(--c-lt-elem-accent) 100%
+  );
+  background-size: 250% 100%;
+  animation: titleGlare linear infinite;
+  animation-duration: 20s;
 }
 
 .benefits-list {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 32px;
 }
 
 .benefits-item {
-  /* TODO remove fixed sizes */
-
-  /* height: 184px;
-  width: 384px; */
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -41,41 +36,71 @@
   justify-content: center;
   align-items: center;
 
-  /* background-color: var(--c-lt-elem-bg-accent); */
+  background-color: var(--c-lt-elem-bg-accent);
   background: linear-gradient(
-    127deg,
-    var(--c-lt-elem-bg-accent),
-    var(--c-lt-elem-bg),
-    var(--c-lt-elem-bg-accent),
-    var(--c-lt-elem-bg),
-    var(--c-lt-elem-bg-accent)
+    67deg,
+    var(--c-lt-elem-bg-accent) 15%,
+    var(--c-lt-elem-bg) 23%,
+    var(--c-lt-elem-bg-accent) 38%,
+    var(--c-lt-elem-bg-accent) 61%,
+    var(--c-lt-elem-bg) 70%,
+    var(--c-lt-elem-bg-accent) 100%
   );
-  background-size: 160% 160%;
-  animation: gradientShift 5500ms ease infinite;
+  background-size: 300% 300%;
+  animation: gradientShift 6500ms ease infinite;
   border-radius: 8px;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes back {
-  100% {
-    background-position: 2000px 0;
-  }
 }
 
 .benefits-icon-box .benefits-icon {
   stroke: var(--c-lt-elem-accent);
   fill: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .benefits-section {
+    padding: 80px 0;
+  }
+
+  .benefits-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .benefits-section {
+    padding: 124px 0;
+  }
+
+  .benefits-title span {
+    animation-duration: 18s;
+  }
+
+  .benefits-list.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 32px;
+  }
+
+  .grid-item1 {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+
+  .grid-item2 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  .grid-item3 {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+
+  .grid-item4 {
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -84,15 +109,17 @@
   }
 
   .benefits-section .container {
+    position: relative;
     padding-top: 116px;
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* flex-direction: column; */
-    justify-content: space-between;
-    background-image: url(/images/benefits-stars-bg-desk.png);
+
+    background-image: url('/images/benefits-stars-bg-desk.png');
+    background-image: image-set(
+      url('/images/benefits-stars-bg-desk-1x.webp') 1x,
+      url('/images/benefits-stars-bg-desk-2x.webp') 2x
+    );
     background-repeat: no-repeat;
     background-position: right top;
-    position: relative;
+    background-size: 526px 408px;
   }
 
   .benefits-title {
@@ -102,11 +129,12 @@
     left: 32px;
   }
 
+  .benefits-list {
+    margin-top: 276px;
+  }
+
   .benefits-list.grid-container {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 32px;
   }
 
   .grid-item1 {
@@ -128,8 +156,25 @@
     grid-column: 3 / 4;
     grid-row: 2;
   }
+}
 
-  .benefits-list {
-    margin-top: 276px;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  80% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes titleGlare {
+  0% {
+    background-position: 250% 50%;
+  }
+  100% {
+    background-position: -250% 50%;
   }
 }
