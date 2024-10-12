@@ -5,7 +5,7 @@ new Accordion('.accordion-container', {
   openOnInit: [0],
   collapse: false,
 });
-
+/*
 const icon = document.querySelector('.ac-trigger');
 
 icon.addEventListener('click', function () {
@@ -18,4 +18,4 @@ icon.addEventListener('click', function () {
   } else {
     content.style.display = 'none';
   }
-});
+});*/
