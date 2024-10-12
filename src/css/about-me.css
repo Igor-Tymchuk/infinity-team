@@ -1,0 +1,173 @@
+.about-me {
+    padding: 0;
+    margin: 0;
+}
+
+.about-container {
+    padding-top: 0px;
+    padding-bottom: 24px;
+    border-top: 1px solid var(--c-lt-elem-bg);
+}
+
+.span-me {
+    color: var(--c-lt-elem-accent);
+}
+
+.profile-photo {
+    border-radius: 16px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 32px;
+}
+
+.about-bio {
+    margin-top: 40px;
+}
+
+.about-bio-title {
+    margin-bottom: 32px;
+}
+
+.about-bio-text {
+    margin-bottom: 24px;
+}
+
+.about-education {
+    margin-top: 40px;
+}
+
+.about-education-title {
+    margin-bottom: 32px;
+}
+
+.about-education-list  {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.about-education-item {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+.about-education-item li {
+    position: relative; 
+    padding-left: 18px; 
+}
+
+.about-education-item li::before {
+    content: '•'; 
+    position: absolute; 
+    left: 0; 
+    color: var(--c-lt-elem-accent); 
+    font-size: 1.2em; 
+}
+
+.about-role {
+    margin-top: 40px;
+}
+
+.about-role-title {
+    margin-bottom: 32px;
+}
+
+.about-role-item li {
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 12px; 
+}
+
+.about-role-item li::before {
+    content: '•'; 
+    position: absolute; 
+    left: 0; 
+    color: var(--c-lt-elem-accent); 
+    font-size: 1.2em; 
+}
+
+.about-role-title {
+    text-align: left;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px)  {
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .profile-photo {
+        width: 45%;
+        order: 1;
+    }
+
+    .about-bio {
+        width: 45%;
+        order: 2;
+    }
+
+    .about-bottom {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 32px;
+        order: 3; 
+    }
+
+    .about-education, .about-role {
+        width: 45%;
+    }
+}
+
+.about-title {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 40px;
+    
+}
+
+/* Desktop Styles */
+@media only screen and  (min-width: 1280px) {
+    .about-container {
+        flex-direction: row; 
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .profile-photo {
+        margin-top: 408px; 
+    }
+
+    .about-bio {
+        order: 1;
+        margin-left: auto; 
+        margin-right: 0;
+        width: 50%; 
+        padding-left: 32px; 
+    }
+
+    .about-education {
+        order: 3;
+        margin-top: 32px;
+    }
+
+    .about-role {
+        order: 4;
+        margin-top: 32px;
+    }
+
+    .about-role, .about-education {
+        width: 45%;
+    }
+
+    .about-education {
+        margin-right: 10%;
+    }
+}
