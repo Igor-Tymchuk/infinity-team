@@ -9,7 +9,7 @@
   <script type="module" crossorigin src="/infinity-team/index.js"></script>
   <link rel="modulepreload" crossorigin href="/infinity-team/assets/vendor-CTqzIL4Y.js">
   <link rel="stylesheet" crossorigin href="/infinity-team/assets/vendor-CzG10Eoq.css">
-  <link rel="stylesheet" crossorigin href="/infinity-team/assets/index-DpT4v3hp.css">
+  <link rel="stylesheet" crossorigin href="/infinity-team/assets/index-DPuqCV29.css">
 </head>
 
 <body>
@@ -210,7 +210,7 @@
     <h2 class="section-title my-projects-title">
       My <span class="projects-title">projects</span>
     </h2>
-    <ul>
+    <ul id="projects-list">
       <li>
         <picture>
           <source
@@ -231,12 +231,12 @@
           <img
             class="projects-img-list"
             src="/images/finances.png"
-            alt="My Projects"
+            alt="Wallet webservice"
             loading="lazy"
           />
         </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <div class="wallet-container">
+        <div class="projects-wallet-container">
           <h3 class="section-subtitle projects-name">Wallet webservice</h3>
           <div class="projects-btn-container">
             <a
@@ -277,11 +277,11 @@
           <img
             class="projects-img-list"
             src="/images/organic.png"
-            alt="My projects"
+            alt="Green harvest webservice"
           />
         </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <div class="wallet-container">
+        <div class="projects-wallet-container">
           <h3 class="section-subtitle projects-name">
             Green harvest webservice
           </h3>
@@ -321,10 +321,14 @@
             srcset="/infinity-team/assets/eng-mob-BfyLVSAi.webp 1x, /infinity-team/assets/eng-mob-x2-DCtN7a8y.webp 2x"
             type="image/webp"
           />
-          <img class="projects-img-list" src="/images/eng.png" alt="projects" />
+          <img
+            class="projects-img-list"
+            src="/images/eng.png"
+            alt="English Exellence website"
+          />
         </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <div class="wallet-container">
+        <div class="projects-wallet-container">
           <h3 class="section-subtitle projects-name">
             English Exellence website
           </h3>
@@ -349,7 +353,9 @@
       </li>
     </ul>
     <div class="projects-button-container">
-      <button type="button" class="projects-load-button">Load More</button>
+      <button type="button" class="projects-load-button" id="projects-more-btn">
+        Load More
+      </button>
     </div>
   </div>
 </section>
