@@ -6,18 +6,13 @@ const menuLinks = document.querySelectorAll('.mob-menu-item a');
 
 
 openMenuBtn.addEventListener('click', () => {
-  if (mobMenuContainer.classList.contains('active')) { 
+  if (mobMenuContainer.classList.contains('active')) {
     mobMenuContainer.classList.remove('active');
-    openIcon.classList.toggle('header-none');
-    closeIcon.classList.toggle('header-none');
     document.body.classList.remove('scroll-lock');
-
-  }
-  else
+  } else {
     mobMenuContainer.classList.add('active');
-    openIcon.classList.toggle('header-none');
-    closeIcon.classList.toggle('header-none');
     document.body.classList.add('scroll-lock');
+  }
 });
 
 
@@ -29,14 +24,26 @@ openMenuBtn.addEventListener('click', () => {
 //     bodyScrollLock.enableBodyScroll(document.body);
 //     document.body.classList.remove('scroll-lock');
 //   });
-  menuLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({
-            behavior: 'smooth'
-        });
-      mobMenuContainer.classList.remove('active');
+const navIcon = document.querySelector('#burger');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({
+      behavior: 'smooth'
     });
+    mobMenuContainer.classList.remove('active');
+    document.body.classList.remove('scroll-lock');
+    navIcon.classList.toggle('open');
+  });
+});
+
+// css burger animation
+document.addEventListener('DOMContentLoaded', function () {
+
+  navIcon.addEventListener('click', function () {
+    navIcon.classList.toggle('open');
+  });
 });
