@@ -104,6 +104,11 @@
   stroke: var(--c-lt-text-main);
   fill: transparent;
 }
+
+.reviews-btn:disabled {
+  cursor: not-allowed;
+}
+
 .reviews-btn:disabled .reviews-icon {
   stroke: var(--c-lt-elem-bg);
 }
