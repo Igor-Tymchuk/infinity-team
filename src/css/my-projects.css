@@ -11,6 +11,7 @@
     width: 100%;
     height: auto;
     margin-bottom: 12px;
+    border-radius: 16px;
 }
 
 .projects-subtitle {
@@ -94,13 +95,14 @@
 
     .projects-img-list {
         margin-bottom: 16px;
+        border-radius: 24px;
     }
 
     .projects-name {
         margin-bottom: 60px;
     }
 
-    .wallet-container {
+    .projects-wallet-container {
         display: flex;
         justify-content: space-between;
     }
@@ -138,6 +140,7 @@
 
     .projects-img-list {
         margin-bottom: 16px;
+        border-radius: 24px;
     }
 
     .projects-subtitle {

@@ -3,7 +3,7 @@
     <h2 class="section-title my-projects-title">
       My <span class="projects-title">projects</span>
     </h2>
-    <ul>
+    <ul id="projects-list">
       <li>
         <picture>
           <source
@@ -30,12 +30,12 @@
           <img
             class="projects-img-list"
             src="/images/finances.png"
-            alt="My Projects"
+            alt="Wallet webservice"
             loading="lazy"
           />
         </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <div class="wallet-container">
+        <div class="projects-wallet-container">
           <h3 class="section-subtitle projects-name">Wallet webservice</h3>
           <div class="projects-btn-container">
             <a
@@ -76,11 +76,11 @@
           <img
             class="projects-img-list"
             src="/images/organic.png"
-            alt="My projects"
+            alt="Green harvest webservice"
           />
         </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <div class="wallet-container">
+        <div class="projects-wallet-container">
           <h3 class="section-subtitle projects-name">
             Green harvest webservice
           </h3>
@@ -120,10 +120,14 @@
             srcset="/images/eng-mob.webp 1x, /images/eng-mob-x2.webp 2x"
             type="image/webp"
           />
-          <img class="projects-img-list" src="/images/eng.png" alt="projects" />
+          <img
+            class="projects-img-list"
+            src="/images/eng.png"
+            alt="English Exellence website"
+          />
         </picture>
         <p class="projects-subtitle">React, JavaScript, Node JS, Git</p>
-        <div class="wallet-container">
+        <div class="projects-wallet-container">
           <h3 class="section-subtitle projects-name">
             English Exellence website
           </h3>
@@ -148,7 +152,9 @@
       </li>
     </ul>
     <div class="projects-button-container">
-      <button type="button" class="projects-load-button">Load More</button>
+      <button type="button" class="projects-load-button" id="projects-more-btn">
+        Load More
+      </button>
     </div>
   </div>
 </section>
