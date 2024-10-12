@@ -15,16 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     trigger.addEventListener('click', function () {
       const isOpen = item.classList.contains('active');
-
-      // Close all items
       accordionItems.forEach(accItem => {
-        accItem.classList.remove('active');
-        accItem.querySelector('.ac-panel').style.maxHeight = null;
-        accItem.querySelector('.ac-trigger').style.transform = 'rotate(0deg)';
+        if (accItem !== item) {
+          accItem.classList.remove('active');
+          accItem.querySelector('.ac-panel').style.maxHeight = null;
+          accItem.querySelector('.ac-trigger').style.transform = 'rotate(0deg)';
+        }
       });
-
-      // Open clicked item if it was closed
-      if (!isOpen) {
+      if (isOpen) {
+        item.classList.remove('active');
+        panel.style.maxHeight = null;
+        trigger.style.transform = 'rotate(0deg)';
+      } else {
         item.classList.add('active');
         panel.style.maxHeight = panel.scrollHeight + 'px';
         trigger.style.transform = 'rotate(180deg)';

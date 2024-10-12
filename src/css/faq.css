@@ -21,10 +21,6 @@
     border-radius: 10px;
 }
 
-.icon-flipped {
-    transform: scaleY(-1);
-    transition: transform 0.3s;
-}
 
 
 .ac-panel .faq-text {
