@@ -66,7 +66,7 @@
     letter-spacing: 0.03em;
 }
 
-.question-close .ac-trigger {
+.ac .question-close .ac-trigger {
     border-radius: 8px;
     border: none;
     padding-top: 8px;
@@ -94,7 +94,7 @@
 
 }
 
-@media (min-width: 1228px) {
+@media (min-width: 1128px) {
     .faq-section {
         padding-bottom: 164px;
     }
