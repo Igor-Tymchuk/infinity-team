@@ -2,6 +2,7 @@ body {
   font-family: var(--ff-global-font);
   font-size: 16px;
   font-style: normal;
+  font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.03125em;
   background-color: var(--c-lt-body-bg);
@@ -16,6 +17,7 @@ body.dark-theme {
 /** TEXT STYLES */
 
 /* h1 */
+/* h1 - головний заголовок */
 .main-title {
   font-family: var(--ff-big-title-font);
   font-size: 64px;
@@ -27,6 +29,7 @@ body.dark-theme {
 }
 
 /* h2 */
+/* h2 - заголовки секцій*/
 .section-title {
   font-family: var(--ff-big-title-font);
   font-size: 52px;
@@ -38,6 +41,7 @@ body.dark-theme {
 }
 
 /* h3 */
+/* h3 - підзаголовки в середині секцій*/
 .section-subtitle {
   font-family: var(--ff-global-font);
   font-size: 32px;
@@ -49,6 +53,7 @@ body.dark-theme {
 }
 
 /* accent bigger text */
+/* акцентований текст*/
 .caption-text {
   font-family: var(--ff-global-font);
   font-size: 18px;
@@ -59,7 +64,7 @@ body.dark-theme {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .main-title {
     font-size: 136px;
     line-height: 1.1471;
@@ -68,8 +73,8 @@ body.dark-theme {
 
   .section-title {
     font-size: 108px;
-    line-height: 1.2308;
-    letter-spacing: 0.03462em;
+    line-height: 1.1482;
+    letter-spacing: 0.01667em;
   }
 
   .section-subtitle {
@@ -88,6 +93,7 @@ body.dark-theme {
 /** ELEM STYLES */
 
 /* main btn styles in 'MY PROJECTS' and 'WORK TOGETHER' sections */
+/* основні спільні стилі кнопок у секціях'MY PROJECTS' і 'WORK TOGETHER'  */
 .btn {
   display: flex;
   align-items: center;
@@ -105,7 +111,8 @@ body.dark-theme {
   letter-spacing: 0.03125em;
 }
 
-/* pattern styles for hidden elemen */
+/* pattern styles for hidden elements */
+/* патернт для прихованих елементів*/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -121,6 +128,7 @@ body.dark-theme {
 }
 
 /* lock scroll for modal and burger */
+/* блокування скроллу для відкритих модалок і бургера */
 .scroll-lock {
   overflow: hidden;
 }

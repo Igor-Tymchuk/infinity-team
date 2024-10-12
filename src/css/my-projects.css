@@ -1,0 +1,152 @@
+.my-projects-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.projects-title {
+    color: var(--c-lt-elem-accent);
+}
+
+.projects-img-list {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.projects-subtitle {
+    font-family: var(--ff-global-font);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--c-lt-text-main);
+    margin-bottom: 16px;
+}
+
+.projects-name {
+    margin-bottom: 16px;
+}
+
+.projects-arrow-svg {
+    margin-left: 12px;
+    stroke: var(--c-lt-elem-accent);
+}
+
+.projects-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.projects-visiting-btn {
+    background-color: var(--c-lt-elem-bg);
+}
+
+.projects-visiting-btn:hover {
+    background-color: var(--c-lt-elem-bg-effect);
+    transition: var(--trn-main-transition-params);
+}
+
+.projects-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-load-button {
+    padding: 12px 24px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    font-family: var(--ff-global-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--c-lt-text-main);
+}
+
+.projects-load-button:hover {
+    color: var(--c-lt-elem-accent);
+    transition: var(--trn-main-transition-params);
+}
+
+.projects-load-button::after {
+    content: "";
+    position: absolute;
+    left: 13%;
+    right: 13%;
+    bottom: 10px;
+    height: 2px;
+    display: inline-block;
+    background-color: #00b068;
+}
+
+
+/* ************ Tablet Adaptive ************ */
+
+@media only screen and (min-width: 768px) {
+    .projects-subtitle {
+        margin-bottom: 20px;
+    }
+
+    .projects-img-list {
+        margin-bottom: 16px;
+    }
+
+    .projects-name {
+        margin-bottom: 60px;
+    }
+
+    .wallet-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .projects-visiting-btn {
+        margin-bottom: 0;
+    }
+
+    .projects-btn-container {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+/* ************************ */
+
+
+/* ********* Dekstop adaptive ********** */
+
+
+@media only screen and (min-width: 1280px) {
+    .my-projects-container {
+        padding-bottom: 48px;
+    }
+
+    .projects-name {
+        font-family: var(--ff-global-font);
+        font-size: 36px;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: var(--c-lt-text-main);
+        margin-bottom: 80px;
+    }
+
+    .projects-img-list {
+        margin-bottom: 16px;
+    }
+
+    .projects-subtitle {
+        margin-bottom: 20px;
+    }
+
+    .projects-visiting-btn {
+        margin-bottom: 0;
+    }
+}
+
+/* ********************* */
