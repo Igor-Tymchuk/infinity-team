@@ -15,9 +15,6 @@
 }
 
 .header-logo-link {
-    font-family: var(--ff-big-title-font); 
-    font-weight: 400;
-    font-size: 24px;
     line-height: 1;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -151,7 +148,7 @@
     }
 }
 
-
+/*для планшета*/
 @media screen and (min-width: 768px) {
     .header {
         padding: 32px 0;
@@ -180,5 +177,14 @@
 
     .theme-checkbox {
         margin: 0 40px 0 auto;
+    }
+}
+
+/* для ПК */
+@media screen and (min-width: 1280px) {
+    .header-logo-link {
+        font-family: var(--ff-big-title-font);
+        font-weight: 400;
+        font-size: 24px;
     }
 }
