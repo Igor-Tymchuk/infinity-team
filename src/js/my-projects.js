@@ -14,6 +14,7 @@ function showMoreProjects() {
   for (let i = currentIndex; i < currentIndex + itemsToDisplay; i++) {
     if (i < hiddenItems.length) {
       hiddenItems[i].classList.remove('projects-visually-hidden');
+      hiddenItems[i].classList.add('item-appear');
     }
   }
 
