@@ -16,16 +16,15 @@ openMenuBtn.addEventListener('click', () => {
 });
 
 
-// window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-//     if (!e.matches) return;
-//     mobileMenu.classList.remove('is-open');
-//     openMenuBtn.classList.remove('burger-active');
-//     openMenuBtn.setAttribute('aria-expanded', false);
-//     bodyScrollLock.enableBodyScroll(document.body);
-//     document.body.classList.remove('scroll-lock');
-//   });
+// cancel scroll-lock and close mob.menu for <786px
+window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+  if (!e.matches) return;
+  mobMenuContainer.classList.remove('active');
+  document.body.classList.remove('scroll-lock');
+  navIcon.classList.remove('open');
+});
 const navIcon = document.querySelector('#burger');
-
+//go to selected link in mob.menu
 menuLinks.forEach(link => {
   link.addEventListener('click', function (event) {
     event.preventDefault();
@@ -39,10 +38,8 @@ menuLinks.forEach(link => {
     navIcon.classList.toggle('open');
   });
 });
-
 // css burger animation
 document.addEventListener('DOMContentLoaded', function () {
-
   navIcon.addEventListener('click', function () {
     navIcon.classList.toggle('open');
   });

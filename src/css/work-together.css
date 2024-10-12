@@ -107,10 +107,10 @@
 .work-icon-email {
   position: absolute;
   right: 16px;
-  /* top: 16px; */
+  top: 16px;
   /* padding-bottom: 16px; */
-  top: 50%;
-  transform: translateY(-50%);
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
   fill: #238d1a;
   /* stroke-width: 2px;
   stroke: var(--c-lt-elem-bg);
