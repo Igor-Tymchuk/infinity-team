@@ -40,7 +40,7 @@
 .mob-menu-container {
     display: none;
     position: fixed;
-    top: 10;
+    top: 12;
     right: 0;
     width: 100%;
     height: 100%;
@@ -48,8 +48,7 @@
     z-index: 100;
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
-    background-repeat: no-repeat;
-    
+    background-color: var(--c-lt-body-bg);
 }
 
 .mob-menu-container.active {
@@ -59,6 +58,7 @@
 
 .mob-menu-list {
     height: 100vh;
+    max-width: 320px;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -66,10 +66,12 @@
     justify-content: center;
     align-items: center;
     background-color: var(--c-lt-body-bg);
-    background-size: contain;
-    background-image: image-set url('/images/mobile-menu-bg-1x-top.png') 1x, url('/images/mobile-menu-bg-2x-top.png') 2x;
-    background-position: right top, bottom center;
-    background-repeat: no-repeat no-repeat;
+    background-size: auto;
+    background-image: url('../images/mobile-burger-stars-bg-up.png'), url('../images/mobile-burger-stars-bg-down.png');
+    /* background-position: top, bottom; */
+    /* background-position: top, bottom 120px left 140px; */
+    background-position: top 90px left 10px, bottom 120px left 120px;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .mob-menu-item {
@@ -82,7 +84,8 @@
     line-height: 24px;
     text-decoration: none;
     letter-spacing: 0.5px;
-    transition: color 0.3s ease-in-out;
+    /* transition: color 0.3s ease-in-out; */
+    transition: var(--trn-main-transition-param);
 }
 
 .mob-menu-item a:hover {
@@ -183,7 +186,7 @@
 /* для ПК */
 @media screen and (min-width: 1280px) {
     .header-logo-link {
-        font-family: var(--ff-big-title-font);
+        font-family: var(--c-dt-elem-bg);
         font-weight: 400;
         font-size: 24px;
     }
