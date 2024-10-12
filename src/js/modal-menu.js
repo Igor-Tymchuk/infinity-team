@@ -11,6 +11,7 @@ openMenuBtn.addEventListener('click', () => {
     openIcon.classList.toggle('header-none');
     closeIcon.classList.toggle('header-none');
     document.body.classList.remove('scroll-lock');
+
   }
   else
     mobMenuContainer.classList.add('active');
@@ -28,9 +29,6 @@ openMenuBtn.addEventListener('click', () => {
 //     bodyScrollLock.enableBodyScroll(document.body);
 //     document.body.classList.remove('scroll-lock');
 //   });
-
-
-
   menuLinks.forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault();

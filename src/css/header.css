@@ -16,6 +16,9 @@
 }
 
 .header-logo-link {
+    font-family: var(--c-dt-elem-bg);
+    font-weight: 400;
+    font-size: 24px;
     line-height: 1;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -60,6 +63,7 @@
 }
 
 .mob-menu-list {
+    margin: 0, auto;
     height: 100vh;
     max-width: 320px;
     display: flex;
@@ -189,8 +193,6 @@
 /* для ПК */
 @media screen and (min-width: 1280px) {
     .header-logo-link {
-        font-family: var(--c-dt-elem-bg);
-        font-weight: 400;
-        font-size: 24px;
+
     }
 }
