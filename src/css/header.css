@@ -43,7 +43,6 @@
 }
 
 .mob-menu-container {
-    margin: 0 auto;
     display: none;
     position: fixed;
     top: 12;
@@ -63,7 +62,7 @@
 }
 
 .mob-menu-list {
-    margin: 0, auto;
+    margin: 0 auto;
     height: 100vh;
     max-width: 320px;
     display: flex;
@@ -195,4 +194,58 @@
     .header-logo-link {
 
     }
+}
+
+
+/*burger*/
+#burger {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    margin: 0 auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+#burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 21px;
+    background: #292929;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+#burger span:nth-child(1) {
+    top: 9px;
+    left: 5.5px;
+}
+#burger span:nth-child(2),
+#burger span:nth-child(3) {
+    top: 16px;
+    left: 5.5px;
+}
+#burger span:nth-child(4) {
+    top: 23px;
+    left: 5.5px;
+}
+#burger.open span:nth-child(1) {
+    top: 16px;
+    left: 5.5px;
+    width: 0%;
+    left: 50%;
+}
+#burger.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+#burger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+#burger.open span:nth-child(4) {
+    top: 16px;
+    left: 5.5px;
+    width: 0%;
+    left: 50%;
 }
