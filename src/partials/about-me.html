@@ -2,8 +2,36 @@
     <div class="container about-container">
         <h2 class="section-title about-title">About <span
                 class="span-me">Me</span></h2>
-        <img src="../images/boy-mob.webp" alt="Lloyd Jefferson profile photo"
-            class="profile-photo">
+        <picture>
+            <!-- Десктоп (1280px и выше) -->
+            <source
+                media="(min-width: 1280px)"
+                srcset="
+                        .../images/boy.webp 1x,
+                        //images/boy-x2.webp 2x
+                      "
+                type="image/webp" /> <!-- Планшет (768px - 1279px) -->
+            <source
+                media="(min-width: 768px)"
+                srcset="
+                /images/boy-tab.webp 1x,
+                /images/boy-tab-x2.webp 2x
+                      "
+                type="image/webp" /> <!-- Мобильные устройства (до 767px) -->
+            <source
+                media="(max-width: 767px)"
+                srcset="
+                        /images/boy-mob.webp 1x,
+                        /images/boy-mob-x2.webp 2x
+                      "
+                type="image/webp" />
+            <!-- Изображение по умолчанию (мобильное) -->
+            <img
+                class="card-img"
+                src="../images/boy.png"
+                alt="Lloyd Jefferson profile photo"
+                loading="lazy" />
+        </picture>
 
         <div class="about-bio">
             <h3 class="about-bio-title">BIO</h3>
