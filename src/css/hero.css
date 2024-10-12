@@ -1,5 +1,5 @@
-.background-decor {
-    padding: 96px 0 0 0;
+.section-hero .background-decor {
+    padding-top: 96px;
     background-image: url(/images/header-stars-mob-up.png),
                       url(/images/header-stars-mob-down.png);
     background-repeat: no-repeat;
@@ -7,18 +7,18 @@
 }
 .hero-title-box {
     display: flex;
-    margin-bottom: 40px;
+    /* min-width: 320px; */
 }
-.main-title {
-    color: var(--c-lt-elem-accent);
+.section-hero .main-title {
+    color: var(--c-lt-text-main);
 }
 .hero-img-box {
     border-radius: 32px;
-    width: 592px;
+    max-width: 592px;
     height: 444px;
     display: none;
 }
-.rect {
+.section-hero .rect {
     position: absolute;
     display: inline-block;
     border-radius: 16px;
@@ -27,26 +27,25 @@
     width: 165px;
     height: 92px;
     background-color: var(--c-lt-elem-bg-accent);
-    transition-property: background-image 1s;
-    transition-duration: 1s;
-    transition: var(--trn-main-transition-params);
+    transition: background-image var(--trn-main-transition-params), width var(--trn-main-transition-params);
 }
 
-.main-title span {
-    color: var(--c-lt-text-main);
+.section-hero .main-title span {
+    color: var(--c-lt-elem-accent);
 }
 
-.button-box {
+.section-hero .button-box {
     position: relative;
     max-width: 416px;
+
 }
-.button {
+.section-hero .button {
     position: relative;
     display: block;
     font-family: var(--ff-global-font); 
     font-weight: 400;
     font-size: 18px;
-    line-height: 156%;
+    line-height: 1.56;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #000;
@@ -59,24 +58,25 @@
     z-index: 1;
 }
 
-.button-box:hover .rect {
+.section-hero .button-box:hover .rect {
     background-color: var(--c-lt-elem-accent);
 }
 
-.button-box:focus .rect,
-.button-box:active .rect{
+.section-hero .button-box:focus .rect,
+.section-hero .button-box:active .rect{
     background-image: linear-gradient(60deg, var(--c-lt-elem-accent) 0%, var(--c-lt-elem-bg-accent) 36%, #fff 100%);
-    opacity: 0.5;
+    width: 100%;
 }
 
-.arrow-button {
+.section-hero .arrow-button {
     position: absolute;
     left: 6px;
-    top: -30px;
+    top: 28px;
     font-size: 28px;
     fill: var(--c-lt-elem-accent);
     color: var(--c-lt-elem-accent);
     stroke: var(--c-lt-elem-accent);
+    height: 30px;
 }
 
 .section-hero .caption-text {
@@ -87,21 +87,29 @@
     color: var(--c-lt-elem-accent);
 }
 
-.wraper-contact-list {
+.section-hero .wraper-contact-list {
     background-color: var(--c-lt-elem-bg);
     padding: 32px 0;
 }
 
-.contact-list {
+.section-hero .contact-list {
     display: flex;
     flex-direction: column;
     gap: 24px;
     text-align: center;
 }
+.section-hero .contact-list-item a:hover  {
+    color: #fff;
+  
+}
+.section-hero .contact-list-item a:active,
+.section-hero .contact-list-item a:focus {
+    color: var(--c-dt-elem-accent);
+}
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
-    .background-decor {
+    .section-hero .background-decor {
         padding-top: 88px;
         background-image: url(/images/header-stars-tablet-up.png),
         url(/images/header-stars-tablet-down.png);
@@ -110,29 +118,32 @@
     .hero-title-box {
         margin-bottom: 60px;
     }
-    .rect {   
+    .section-hero .rect {   
         width: 261px;
         right: 0;
     }
  
-    .button {
+    .section-hero .button {
         font-size: 20px;
         line-height: 160%;
     }
-    .arrow-button {
-        top: -28px;
+    .section-hero .arrow-button {
+        top: 30px;
     }
     .section-hero .caption-text {
         padding-bottom: 104px;
     }
-    .contact-list {
+    .section-hero .contact-list {
         justify-content: center;
         flex-direction: row;
+    }
+    .section-hero .wraper-contact-list {
+        padding: 40px 0;
     }
 }
 
 @media only screen and (min-width: 1280px) {
-    .background-decor {
+    .section-hero .background-decor {
         background-image: url(/images/header-stars-desk-up.png),
         url(/images/header-stars-desk-down.png);
         background-position: top -60px right 101px, left 126px bottom 45px;
@@ -150,17 +161,24 @@
         display: flex;
         justify-content: space-between;
     }
+    .section-hero .main-title {
+        font-size: 124px;
+        line-height: 1.19355;
+        letter-spacing: 0.01em;
+        max-width: 552px;
+    }
     .button-box {
         width: 416px;
     }
     .button {
         margin-bottom: 0;
     }
-    /* .caption-text {
+    .section-hero .caption-text {
         width: 592px;
         padding-bottom: 96px;
-    } */
-    .wraper-contact-list {
+    }
+    .section-hero .wraper-contact-list {
         padding: 40px 0;
     }
+  
   }
