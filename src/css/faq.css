@@ -2,13 +2,8 @@
     padding-bottom: 80px;
 }
 
-.section-title .faq-title {
-    font-family: Impact;
-    font-size: 52px;
-    letter-spacing: 1.8px;
-    line-height: 64px;
-    color: var(--c-lt-text-main);
-    text-transform: uppercase;
+.faq-title {
+    margin-bottom: 40px;
 }
 
 .accordion-container .ac {
@@ -16,7 +11,7 @@
     background-color: transparent;
     border-bottom: 1px solid var(--c-lt-elem-bg);
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     position: relative;
     overflow: hidden;
 }
@@ -49,8 +44,9 @@
 
 .question-close {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
+    gap: 16px;
     cursor: pointer;
     position: relative;
     z-index: 2;
@@ -60,7 +56,7 @@
     font-family: var(--ff-global-font);
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.55556;
+    line-height: 1.6;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--c-lt-text-main);
@@ -74,9 +70,13 @@
     letter-spacing: 0.03em;
 }
 
-.question-close>.faq-trigger {
+.question-close .ac-trigger {
     border-radius: 8px;
-    padding: 8px;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
     stroke: #292929;
     fill: none;
     outline: none;
@@ -88,13 +88,14 @@
 }
 
 @media screen and (min-width: 768px) {
-    .question-close {
-        max-width: 544px;
+    .ac-header {
+        font-size: 20px;
     }
 
-    .ac-panel {
-        max-width: 544px;
+    .question-close {
+        gap: 24px;
     }
+
 }
 
 @media (min-width: 1228px) {
