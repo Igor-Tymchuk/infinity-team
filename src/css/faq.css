@@ -17,7 +17,7 @@
 }
 
 .ac.active {
-    background-color: #0fd77d;
+    background-color: var(--c-lt-elem-bg-accent);
     border-radius: 10px;
 }
 
