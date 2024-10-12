@@ -96,6 +96,10 @@ body {
     margin-top: 40px;
 }
 
+.about-role-title {
+    margin-bottom: 32px;
+}
+
 .about-role-item li {
     position: relative;
     padding-left: 20px; 
@@ -122,40 +126,47 @@ body {
 } */
 
 /* Tablet Styles */
-@media only screen  and (min-width: 768px) {
+@media only screen and (min-width: 768px)  {
     .about-container {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .profile-photo {
-        margin-top: 408px; 
+        width: 45%;
+        order: 1;
     }
 
     .about-bio {
-        order: 1;
-        margin-left: auto; 
-        margin-right: 0;
-        width: 50%;
-        padding-left: 32px; 
+        width: 45%;
+        order: 2;
     }
 
-    .about-education {
-        order: 3;
+    .about-bottom {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
         margin-top: 32px;
+        order: 3; 
     }
 
-    .about-role {
-        order: 4;
-        margin-top: 32px;
-    }
-
-    .about-role, .about-education {
+    .about-education, .about-role {
         width: 45%;
     }
+}
 
-    .about-education {
-        margin-right: 10%;
-    }
+.about-title {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 40px;
+    
 }
 
 /* Desktop Styles */
