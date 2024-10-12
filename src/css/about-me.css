@@ -1,173 +1,155 @@
 .about-me {
-    padding: 0;
-    margin: 0;
+  padding-bottom: 80px;
 }
 
 .about-container {
-    padding-top: 0px;
-    padding-bottom: 24px;
-    border-top: 1px solid var(--c-lt-elem-bg);
-}
-
-.span-me {
-    color: var(--c-lt-elem-accent);
-}
-
-.profile-photo {
-    border-radius: 16px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 32px;
-}
-
-.about-bio {
-    margin-top: 40px;
-}
-
-.about-bio-title {
-    margin-bottom: 32px;
-}
-
-.about-bio-text {
-    margin-bottom: 24px;
-}
-
-.about-education {
-    margin-top: 40px;
-}
-
-.about-education-title {
-    margin-bottom: 32px;
-}
-
-.about-education-list  {
-    margin-bottom: 12px;
-    text-align: left;
-}
-
-.about-education-item {
-    list-style-type: none; 
-    padding: 0; 
-}
-
-.about-education-item li {
-    position: relative; 
-    padding-left: 18px; 
-}
-
-.about-education-item li::before {
-    content: '•'; 
-    position: absolute; 
-    left: 0; 
-    color: var(--c-lt-elem-accent); 
-    font-size: 1.2em; 
-}
-
-.about-role {
-    margin-top: 40px;
-}
-
-.about-role-title {
-    margin-bottom: 32px;
-}
-
-.about-role-item li {
-    position: relative;
-    padding-left: 20px; 
-    margin-bottom: 12px; 
-}
-
-.about-role-item li::before {
-    content: '•'; 
-    position: absolute; 
-    left: 0; 
-    color: var(--c-lt-elem-accent); 
-    font-size: 1.2em; 
-}
-
-.about-role-title {
-    text-align: left;
-}
-
-/* Tablet Styles */
-@media only screen and (min-width: 768px)  {
-    .about-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-section {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .profile-photo {
-        width: 45%;
-        order: 1;
-    }
-
-    .about-bio {
-        width: 45%;
-        order: 2;
-    }
-
-    .about-bottom {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 32px;
-        order: 3; 
-    }
-
-    .about-education, .about-role {
-        width: 45%;
-    }
+  padding-top: 80px;
 }
 
 .about-title {
-    text-align: left;
-    width: 100%;
-    margin-bottom: 40px;
-    
+  margin-bottom: 40px;
 }
 
-/* Desktop Styles */
-@media only screen and  (min-width: 1280px) {
-    .about-container {
-        flex-direction: row; 
-        display: flex;
-        flex-wrap: wrap;
-    }
+.span-me {
+  color: var(--c-lt-elem-accent);
+}
 
-    .profile-photo {
-        margin-top: 408px; 
-    }
+.card-img {
+  margin-bottom: 40px;
+}
 
-    .about-bio {
-        order: 1;
-        margin-left: auto; 
-        margin-right: 0;
-        width: 50%; 
-        padding-left: 32px; 
-    }
+.about-bio {
+  margin-bottom: 40px;
+}
 
-    .about-education {
-        order: 3;
-        margin-top: 32px;
-    }
+.about-me-subtitle {
+  margin-bottom: 32px;
+}
 
-    .about-role {
-        order: 4;
-        margin-top: 32px;
-    }
+.about-bio-text {
+  max-width: 309px;
+  margin-bottom: 24px;
+}
 
-    .about-role, .about-education {
-        width: 45%;
-    }
+.about-bio-text-second {
+  max-width: 320px;
+}
 
-    .about-education {
-        margin-right: 10%;
-    }
+.about-education {
+  margin-bottom: 40px;
+}
+
+.about-education-title {
+}
+
+.about-education-item {
+}
+
+.about-education-list {
+}
+
+.about-education-item {
+  margin-bottom: 12px;
+  margin-left: 32px;
+  position: relative;
+  max-width: 288px;
+}
+
+.education-item-green-point {
+  position: absolute;
+  top: 10px;
+  left: -18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--c-lt-elem-accent);
+}
+
+.about-education-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-education-list-point {
+}
+
+.about-role {
+}
+
+.about-role-title {
+}
+
+.about-role-item {
+  margin-bottom: 12px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.role-item-green-point {
+  position: absolute;
+  top: 10px;
+  left: -14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--c-lt-elem-accent);
+}
+
+.about-role-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-role-list {
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) {
+  .about-me {
+    padding-bottom: 124px;
+  }
+
+  .top-section {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+
+  .card-img {
+    width: 336px;
+    height: 392px;
+    align-self: flex-end;
+    margin-bottom: 0;
+  }
+
+  .about-bio {
+    margin-bottom: 80px;
+  }
+
+  .about-bio-text {
+    max-width: 336px;
+  }
+
+  .about-bio-text-second {
+    max-width: 330px;
+  }
+
+  .about-bottom {
+    display: flex;
+    gap: 32px;
+  }
+
+  .about-role {
+    background-image: image-set(
+      url('/images/decor-about-me-x1-tab.png') 1x,
+      url('/images/decor-about-me-x2-tab.png') 2x
+    );
+    background-repeat: no-repeat;
+    background-size: 336px 252px;
+    background-position: top 927px right 46px, left 100px bottom 156px;
+  }
 }
