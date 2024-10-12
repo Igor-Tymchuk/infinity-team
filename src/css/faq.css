@@ -6,8 +6,9 @@
     margin-bottom: 40px;
 }
 
-.accordion-container .ac {
-    padding: 20px 24px;
+/*li*/
+.list-style .ac.faq-item-li.faq-item.item-style {
+    padding: 28px 24px;
     background-color: transparent;
     border-bottom: 1px solid var(--c-lt-elem-bg);
     border-radius: 10px;
@@ -16,57 +17,17 @@
     overflow: hidden;
 }
 
-.ac.active {
-    background-color: var(--c-lt-elem-bg-accent);
-    border-radius: 10px;
-}
 
-
-
-.ac-panel .faq-text {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    background-color: transparent;
-    padding: 20px;
-    display: none;
-}
-
-.ac.is-active {
-    display: block;
-    background-color: var(--c-lt-elem-bg-accent)
-}
-
-.question-close {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-}
-
-.ac-header {
+/*button*/
+.ac-trigger.faq-trigger-btn.faq-trigger.trigger-style {
     font-family: var(--ff-global-font);
     font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: left;
     color: var(--c-lt-text-main);
-}
-
-.ac-text {
-    font-family: var(--ff-global-font);
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-}
-
-.ac .question-close .ac-trigger {
     border-radius: 8px;
     border: none;
     padding-top: 8px;
@@ -79,22 +40,35 @@
     transition: transform 0.3s ease;
 }
 
-.ac.active .ac-trigger {
-    transform: rotate(180deg);
+.list-style .ac.faq-item-li.faq-item.item-style.is-active {
+    display: block;
+    background-color: var(--c-lt-elem-bg-accent)
 }
 
-@media screen and (min-width: 768px) {
-    .ac-header {
+
+/*p*/
+.faq-text-container.ac-text.text-style {
+    font-family: var(--ff-global-font);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .ac-trigger.faq-trigger-btn.faq-trigger.trigger-style {
         font-size: 20px;
     }
 
-    .question-close {
-        gap: 24px;
+    .list-style .ac.faq-item-li.faq-item.item-style {
+        margin-top: 0;
     }
 
 }
 
-@media (min-width: 1128px) {
+@media only screen and (min-width: 1128px) {
     .faq-section {
         padding-bottom: 164px;
     }
@@ -107,7 +81,7 @@
         display: flex;
         flex-wrap: nowrap;
         background-image: url('/images/faq-bg1x.png');
-        background-size: 526px;
+        background-size: 536px;
         background-repeat: no-repeat;
         background-position: left bottom;
     }
