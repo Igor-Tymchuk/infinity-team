@@ -10,13 +10,14 @@ openMenuBtn.addEventListener('click', () => {
     mobMenuContainer.classList.remove('active');
     openIcon.classList.toggle('header-none');
     closeIcon.classList.toggle('header-none');
-    document.querySelector('body').classList.remove('scroll-lock');
+    document.body.classList.remove('scroll-lock');
+
   }
   else
     mobMenuContainer.classList.add('active');
     openIcon.classList.toggle('header-none');
     closeIcon.classList.toggle('header-none');
-    document.querySelector('body').classList.add('scroll-lock');
+    document.body.classList.add('scroll-lock');
 });
 
 
