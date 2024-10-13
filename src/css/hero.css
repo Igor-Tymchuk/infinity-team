@@ -36,6 +36,7 @@
 .section-hero .button-box {
     position: relative;
     max-width: 416px;
+    height: 92px;
 
 }
 .section-hero .button {
@@ -47,7 +48,7 @@
     line-height: 1.56;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #000;
+    color: var(--c-lt-text-main);
     margin-bottom: 40px;
     padding: 32px 50px 32px 45px;
     border-radius: 16px;
@@ -59,13 +60,13 @@
 
 .section-hero .button-box:hover .rect {
     background-color: var(--c-lt-elem-accent);
-    width: 279px;
+    width: 88%;
     }
 .section-hero .button-box .button {
     transition: color var(--trn-main-transition-params), letter-spacing var(--trn-main-transition-params);
     }
 .section-hero .button-box:hover .button {
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
 }
   @keyframes glowing {
     0% { background-position: 0 0; }

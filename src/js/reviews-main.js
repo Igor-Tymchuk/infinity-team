@@ -1,4 +1,4 @@
-import { fetchPosts } from './reviews-pixabay-api';
+import { fetchPosts } from './reviews-api';
 import { renderReviews, errorPost } from './reviews-render-functions';
 
 import Swiper from 'swiper';

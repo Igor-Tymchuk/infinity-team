@@ -11,7 +11,7 @@ export function renderReviews(posts) {
               </p>
               <div class="reviews-container">
                 <div class="reviews-wrap-img">
-                  <img src="${avatar_url}" alt="foto" class="reviews-img" />
+                  <img src="${avatar_url}" alt="avatar" class="reviews-img" />
                 </div>
                 <p class="reviews-name">${author}</p>
               </div>
