@@ -56,12 +56,8 @@
   fill: none;
   stroke-width: 1px;
   stroke: var(--c-lt-elem-accent);
-  /* margin-right: 16px; */
-  /* position: absolute; */
   width: 24px;
   height: 24px;
-  /* left: 0;
-  top: 50%; */
   flex-shrink: 0;
 }
 
@@ -70,8 +66,6 @@
 }
 
 .work-form {
-  /* display: flex;
-  gap: 32px; */
   flex-direction: column;
 }
 
@@ -101,21 +95,14 @@
 .work-input-wrapper {
   position: relative;
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .work-icon-email {
   position: absolute;
   right: 16px;
   top: 16px;
-  /* padding-bottom: 16px; */
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
-  fill: #238d1a;
-  /* stroke-width: 2px;
-  stroke: var(--c-lt-elem-bg);
-  border-radius: 50%;
-  background-color: var(--c-lt-elem-accent); */
+  fill: var(--c-lt-elem-accent);
 }
 
 .hidden {
@@ -124,7 +111,7 @@
 
 .work-error-message {
   /* display: none; */
-  color: var(--c-dt-error);
+  color: transparent;
   font-weight: 300;
   font-size: 12px;
   line-height: 1.33333;
@@ -255,6 +242,10 @@
 
   .work-form {
     width: 592px;
+  }
+
+  .work-input-wrapper {
+    margin-bottom: 10px;
   }
 
   .work-contact-title {
