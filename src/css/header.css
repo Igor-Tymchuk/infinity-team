@@ -28,10 +28,12 @@
 .link-hover {
     transition: color var(--trn-main-transition-params);
 }
+
 .link-hover:hover,
 .link-hover:focus {
-color: var(--c-lt-elem-accent);
+    color: var(--c-lt-elem-accent);
 }
+
 .header-logo-span {
     color: var(--c-lt-elem-accent);
 }
@@ -76,7 +78,8 @@ color: var(--c-lt-elem-accent);
     align-items: center;
     background-color: var(--c-lt-body-bg);
     background-size: auto;
-    background-image: url('../images/mobile-burger-stars-bg-up.png'), url('../images/mobile-burger-stars-bg-down.png');
+    background-image: url('../images/mobile-burger-stars-bg-up.png'),
+        url('../images/mobile-burger-stars-bg-down.png');
     background-position: top 90px left 10px, bottom 120px left 120px;
     background-repeat: no-repeat, no-repeat;
 }
@@ -84,8 +87,13 @@ color: var(--c-lt-elem-accent);
 .mob-menu-item {
     margin-bottom: 20px;
 }
-.header-none{
+
+.header-none {
     display: none;
+}
+
+.header-right-box {
+    display: flex;
 }
 
 /* Чекбокс перемикання теми */
@@ -97,9 +105,10 @@ color: var(--c-lt-elem-accent);
     width: 48px;
     height: 24px;
     cursor: pointer;
-    background-color: #E4E5E6;
+    background-color: #e4e5e6;
     border-radius: 16px;
     transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
     &::before,
     &::after {
         content: '';
@@ -112,13 +121,16 @@ color: var(--c-lt-elem-accent);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
             opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     &::before {
         background-color: var(--c-dt-body-bg);
         opacity: 0;
     }
+
     &::after {
         background-color: var(--c-dt-elem-accent);
     }
+
     &:checked {
         background-color: var(--c-dt-body-bg);
 
@@ -139,6 +151,10 @@ color: var(--c-lt-elem-accent);
 @media screen and (min-width: 768px) {
     .header {
         padding: 32px 0;
+    }
+
+    .theme-checkbox {
+        margin-right: 40px;
     }
 
     .header-logo-link {
@@ -162,13 +178,11 @@ color: var(--c-lt-elem-accent);
         display: none;
     }
 }
+
 /* для ПК */
 @media screen and (min-width: 1280px) {
-    .header-logo-link {
-
-    }
+    .header-logo-link {}
 }
-
 
 /*burger*/
 #burger {
@@ -180,6 +194,7 @@ color: var(--c-lt-elem-accent);
     transition: var(--trn-main-transition-params);
     cursor: pointer;
 }
+
 #burger span {
     display: block;
     position: absolute;
@@ -191,31 +206,38 @@ color: var(--c-lt-elem-accent);
     transform: rotate(0deg);
     transition: var(--trn-main-transition-params);
 }
+
 #burger span:nth-child(1) {
     top: 9px;
     left: 5.5px;
 }
+
 #burger span:nth-child(2),
 #burger span:nth-child(3) {
     top: 16px;
     left: 5.5px;
 }
+
 #burger span:nth-child(4) {
     top: 23px;
     left: 5.5px;
 }
+
 #burger.open span:nth-child(1) {
     top: 16px;
     left: 5.5px;
     width: 0%;
     left: 50%;
 }
+
 #burger.open span:nth-child(2) {
     transform: rotate(45deg);
 }
+
 #burger.open span:nth-child(3) {
     transform: rotate(-45deg);
 }
+
 #burger.open span:nth-child(4) {
     top: 16px;
     left: 5.5px;
