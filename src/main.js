@@ -5,5 +5,3 @@ import './js/faq';
 import './js/reviews-pixabay-api';
 import './js/reviews-render-functions';
 import './js/reviews-main';
-
-
