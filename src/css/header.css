@@ -16,7 +16,7 @@
 }
 
 .header-logo-link {
-    font-family: var(--c-dt-elem-bg);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 1;
@@ -25,6 +25,13 @@
     color: var(--c-lt-text-main);
 }
 
+.link-hover {
+    transition: color var(--trn-main-transition-params);
+}
+.link-hover:hover,
+.link-hover:focus {
+color: var(--c-lt-elem-accent);
+}
 .header-logo-span {
     color: var(--c-lt-elem-accent);
 }
@@ -35,30 +42,27 @@
 
 .open-menu-btn {
     border: none;
-    line-height: 0;
     background-color: transparent;
-    padding: 0;
-    stroke: var(--c-lt-text-main);
-    z-index: 200;
+    z-index: 10;
 }
 
 .mob-menu-container {
-    display: none;
-    position: fixed;
+    position: absolute;
     top: 12;
     right: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 100;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
+    z-index: 10;
+    transition: transform var(--trn-main-transition-params);
+    transform: translateX(-100%);
     background-color: var(--c-lt-body-bg);
 }
 
 .mob-menu-container.active {
     display: block;
     transform: translateX(0);
+    opacity: 1;
 }
 
 .mob-menu-list {
@@ -66,7 +70,6 @@
     height: 100vh;
     max-width: 320px;
     display: flex;
-    flex: 1;
     flex-direction: column;
     gap: 24px;
     justify-content: center;
@@ -74,8 +77,6 @@
     background-color: var(--c-lt-body-bg);
     background-size: auto;
     background-image: url('../images/mobile-burger-stars-bg-up.png'), url('../images/mobile-burger-stars-bg-down.png');
-    /* background-position: top, bottom; */
-    /* background-position: top, bottom 120px left 140px; */
     background-position: top 90px left 10px, bottom 120px left 120px;
     background-repeat: no-repeat, no-repeat;
 }
@@ -83,29 +84,6 @@
 .mob-menu-item {
     margin-bottom: 20px;
 }
-
-.mob-menu-item a {
-    color: var(--c-lt-text-main);
-    font-size: 16px;
-    line-height: 24px;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    /* transition: color 0.3s ease-in-out; */
-    transition: var(--trn-main-transition-param);
-}
-
-.mob-menu-item a:hover {
-    color: var(--c-dt-elem-accent);
-}
-
-.close-menu-btn {
-    border: none;
-    line-height: 0;
-    background-color: transparent;
-    padding: 0;
-    stroke: var(--c-dt-elem-bg);
-}
-
 .header-none{
     display: none;
 }
@@ -183,12 +161,7 @@
     .mob-menu-container {
         display: none;
     }
-
-    .theme-checkbox {
-        margin: 0 40px 0 auto;
-    }
 }
-
 /* для ПК */
 @media screen and (min-width: 1280px) {
     .header-logo-link {
@@ -204,7 +177,7 @@
     position: relative;
     margin: 0 auto;
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
+    transition: var(--trn-main-transition-params);
     cursor: pointer;
 }
 #burger span {
@@ -216,7 +189,7 @@
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    transition: var(--trn-main-transition-params);
 }
 #burger span:nth-child(1) {
     top: 9px;

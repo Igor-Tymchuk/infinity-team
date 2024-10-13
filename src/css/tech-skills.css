@@ -1,9 +1,25 @@
+
+#tech-skills {
+    padding-bottom: 80px;
+}
+@media only screen and (min-width: 768px) {
+    #tech-skills {
+        padding-bottom: 124px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    #tech-skills {
+        padding-bottom: 164px;
+    }
+}
+
 .tech-container {
     overflow: hidden;
     padding: 0;
-    height: 244px;
+    height: 280px;
 }
 .tech-skills-first-box {
+    margin-bottom: 7px;
     background-color: var(--c-lt-elem-bg-accent);
     display: flex;
     z-index: 1;
@@ -36,6 +52,8 @@
     padding: 32px 28px;
 }
 @media only screen and (min-width: 768px) {
+    .tech-skills-first-box {
+        margin-bottom: 0;}
     .tech-container {
         height: 280px;
     }
