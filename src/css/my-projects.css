@@ -7,6 +7,10 @@
     color: var(--c-lt-elem-accent);
 }
 
+.projects-name {
+    margin-bottom: 16px;
+}
+
 .projects-img-list {
     width: 100%;
     height: auto;
@@ -100,6 +104,10 @@
         margin-bottom: 60px;
     }
 
+    .projects-name {
+        margin-bottom: 0;
+    }
+
     .projects-item {
         margin-bottom: 60px;
     }
@@ -116,6 +124,7 @@
     .projects-wallet-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .projects-visiting-btn {
