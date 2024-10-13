@@ -1,8 +1,5 @@
 .about-me {
   padding-bottom: 80px;
-}
-
-.about-container {
   padding-top: 80px;
 }
 
@@ -88,12 +85,9 @@
 
 /* tablet */
 @media only screen and (min-width: 768px) {
-  .about-container {
-    padding-top: 124px;
-  }
-
   .about-me {
     padding-bottom: 124px;
+    padding-top: 124px;
   }
 
   .top-section {
@@ -140,17 +134,14 @@
       url('/images/decor-about-me-x2-tab.png') 2x
     );
     background-repeat: no-repeat;
-    background-position: top 970px right 30px, left 100px bottom 156px;
+    background-position: top 850px right 30px, left 100px bottom 156px;
   }
 }
 
 /* desktop */
 @media only screen and (min-width: 1280px) {
-  .about-container {
-    padding-top: 183px;
-  }
-
   .about-me {
+    padding-top: 183px;
     padding-bottom: 145px;
   }
 
@@ -191,6 +182,6 @@
       url('/images/decor-about-me-x1-desk.png') 1x,
       url('/images/decor-about-me-x2-desk.png') 2x
     );
-    background-position: top 850px right 30px, left 100px bottom 156px;
+    background-position: top 675px right 30px, left 100px bottom 156px;
   }
 }
