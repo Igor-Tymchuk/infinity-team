@@ -38,8 +38,8 @@
 }
 
 .faq-trigger-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     fill: transparent;
     stroke: var(--c-lt-text-main);
     flex-shrink: 0;
@@ -101,10 +101,10 @@
     }
 
     .wrap {
-        background-image: url('/images/faq-bg1x.png');
-        background-size: 536px;
+        background-image: image-set(url('/images/faq-bg1x.png') 1x,
+                url('../images/faq-bg.png') 2x);
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: top 540px left 22px;
     }
 
     .faq-title {

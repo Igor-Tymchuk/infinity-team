@@ -29,3 +29,23 @@
     max-width: 1280px;
   }
 }
+
+/* .container {
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  min-width: 312px;
+  max-width: 352px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1246px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+} */

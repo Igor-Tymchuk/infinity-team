@@ -24,8 +24,8 @@
     margin-bottom: 16px;
 }
 
-.projects-name {
-    margin-bottom: 16px;
+.projects-item {
+    margin-bottom: 40px;
 }
 
 .projects-arrow-svg {
@@ -36,14 +36,21 @@
 .projects-btn-container {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 40px;
 }
 
 .projects-visiting-btn {
     background-color: var(--c-lt-elem-bg);
+    border: transparent;
 }
 
 .projects-visiting-btn:hover {
+    border: var(--c-lt-elem-accent);
+    background-color: var(--c-lt-elem-bg-effect);
+    transition: var(--trn-main-transition-params);
+}
+
+.projects-visiting-btn:focus {
+    border: var(--c-lt-elem-accent);
     background-color: var(--c-lt-elem-bg-effect);
     transition: var(--trn-main-transition-params);
 }
@@ -89,6 +96,14 @@
 /* ************ Tablet Adaptive ************ */
 
 @media only screen and (min-width: 768px) {
+    .my-projects-title {
+        margin-bottom: 60px;
+    }
+
+    .projects-item {
+        margin-bottom: 60px;
+    }
+    
     .projects-subtitle {
         margin-bottom: 20px;
     }
@@ -96,10 +111,6 @@
     .projects-img-list {
         margin-bottom: 16px;
         border-radius: 24px;
-    }
-
-    .projects-name {
-        margin-bottom: 60px;
     }
 
     .projects-wallet-container {
@@ -128,6 +139,14 @@
         padding-bottom: 48px;
     }
 
+    .my-projects-title {
+        margin-bottom: 80px;
+    }
+
+    .projects-item {
+        margin-bottom: 80px;
+    }
+
     .projects-name {
         font-family: var(--ff-global-font);
         font-size: 36px;
@@ -135,7 +154,6 @@
         letter-spacing: 0.01em;
         text-transform: uppercase;
         color: var(--c-lt-text-main);
-        margin-bottom: 80px;
     }
 
     .projects-img-list {
