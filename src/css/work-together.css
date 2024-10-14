@@ -31,10 +31,20 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--c-lt-text-main);
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.work-contact-link:hover,
+.work-contact-link:focus {
+  color: var(--c-lt-elem-accent);
+}
+
+.work-contact-link {
+  color: var(--c-lt-text-main);
+  outline: transparent;
+  transition: color var(--trn-main-transition-params);
 }
 
 .work-contact-list-elem {
@@ -82,6 +92,7 @@
   height: 48px;
   background: var(--c-lt-elem-bg);
   padding-right: 40px;
+  transition: outline var(--trn-main-transition-params);
 }
 
 .work-input::placeholder {
@@ -102,7 +113,8 @@
   position: absolute;
   right: 16px;
   top: 16px;
-  fill: var(--c-lt-elem-accent);
+  fill: transparent;
+  transition: fill var(--trn-main-transition-params);
 }
 
 .hidden {
@@ -116,6 +128,7 @@
   font-size: 12px;
   line-height: 1.33333;
   letter-spacing: 0.04em;
+  transition: color var(--trn-main-transition-params);
 }
 
 .work-modal-text {
@@ -127,6 +140,7 @@
   height: 128px;
   background: var(--c-lt-elem-bg);
   margin-bottom: 32px;
+  transition: outline var(--trn-main-transition-params);
 }
 
 .work-modal-text::placeholder {
@@ -144,6 +158,7 @@
   text-align: center;
   color: var(--c-dt-text-main);
   transition: background-color var(--trn-main-transition-params);
+  outline: none;
 }
 
 .work-btn:hover {
@@ -152,6 +167,15 @@
 
 .work-btn:focus {
   background: var(--c-lt-elem-effect);
+}
+
+.work-modal-text:hover,
+.work-input:hover {
+  outline: 1px solid var(--c-lt-elem-bg-effect);
+}
+.work-modal-text:focus-within,
+.work-input:focus-within {
+  outline: 1px solid var(--c-lt-elem-accent);
 }
 
 @media screen and (min-width: 768px) {

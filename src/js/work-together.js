@@ -9,6 +9,7 @@ const modal = document.querySelector('.backdrop');
 const modalCloseBtn = document.querySelector('.work-modal-btn');
 const greenEmailIcon = document.querySelector('.work-icon-email');
 const invalidEmailIcon = document.querySelector('.work-error-message');
+const formBtn = document.querySelector('.work-btn')
 
 export let formData = {};
 
@@ -29,17 +30,20 @@ async function handleForm(event) {
     if (!response) {
       iziToast.error({
         message: 'Error server',
-        color: 'white',
+        theme: 'dark',
         backgroundColor: 'red',
       });
     } else {
       modal.classList.add('is-open');
+      document.body.classList.add('scroll-lock')
       form.reset();
+      greenEmailIcon.style.fill = 'transparent';
     }
   } catch (error) {
     iziToast.error({
       message: 'Server error occurred. Please try again.',
       color: 'white',
+      theme: 'dark',
       backgroundColor: 'red',
     });
   }
@@ -48,6 +52,8 @@ async function handleForm(event) {
 function closeModalWindow(event) {
   if (modal.classList.contains('is-open')) {
     modal.classList.remove('is-open');
+    document.body.classList.remove('scroll-lock')
+    formBtn.style.outline = 'none'
   } else if (event.key === 'Escape') {
     modal.classList.remove('is-open');
   }
@@ -55,10 +61,14 @@ function closeModalWindow(event) {
 
 function checkEmail(event) {
   if (emailInput.value.includes('@')) {
-    greenEmailIcon.classList.remove('visually-hidden');
+    greenEmailIcon.style.fill = 'var(--c-lt-elem-accent)'
     invalidEmailIcon.style.color = 'transparent';
-  } else {
-    greenEmailIcon.classList.add('visually-hidden');
+  } else if (emailInput.value === '') {
+    greenEmailIcon.style.fill = 'transparent';
+    invalidEmailIcon.style.color = 'transparent';
+  }
+  else {
+    greenEmailIcon.style.fill = 'transparent';
     invalidEmailIcon.style.color = 'var(--c-lt-error)';
   }
 }
