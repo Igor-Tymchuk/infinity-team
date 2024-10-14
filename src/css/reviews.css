@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--c-lt-elem-bg);
+  border: 1px solid var(--c-lt-text-main);
   border-radius: 8px;
   padding: 12px;
   width: 40px;
@@ -88,6 +88,7 @@
 
 .reviews-btn:disabled {
   cursor: not-allowed;
+  border: 1px solid var(--c-lt-elem-bg);
 }
 
 .reviews-btn:disabled .reviews-icon {
