@@ -45,6 +45,25 @@ body.dark-theme {
   text-transform: uppercase;
 }
 
+.main-title span,
+.section-title span {
+  color: transparent;
+  -webkit-background-clip: text;
+  /* -webkit-text-stroke: 1px var(--c-lt-elem-accent); */
+  background-image: linear-gradient(
+    60deg,
+    var(--c-lt-elem-accent) 0,
+    var(--c-lt-elem-accent) 75%,
+    var(--c-lt-elem-bg-accent) 80%,
+    var(--c-lt-elem-bg-accent) 84%,
+    var(--c-lt-elem-accent) 90%,
+    var(--c-lt-elem-accent) 100%
+  );
+  background-size: 1000px 100%;
+  animation: titleGlare linear infinite;
+  animation-duration: 20s;
+}
+
 /* h3 */
 /* h3 - підзаголовки в середині секцій*/
 .section-subtitle {
@@ -136,4 +155,25 @@ body.dark-theme {
 /* блокування скроллу для відкритих модалок і бургера */
 .scroll-lock {
   overflow: hidden;
+}
+
+@keyframes titleGlare {
+  0% {
+    background-position: -1000px 50%;
+  }
+  100% {
+    background-position: 1000px 50%;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  80% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

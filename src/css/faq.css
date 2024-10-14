@@ -7,19 +7,30 @@
   margin-bottom: 40px;
 }
 
-.faq-title span {
+/* .faq-title span {
   color: var(--c-lt-elem-accent);
-}
+} */
 
 /*li*/
+
 .faq-ac {
   padding: 28px 24px;
-  border-radius: 16px;
   border-bottom: 1px solid var(--c-lt-elem-bg);
+}
+
+body.dark-theme .faq-ac {
+  border-bottom: 1px solid var(--c-dt-text-main);
 }
 
 .faq-ac.is-active {
   background-color: var(--c-lt-elem-bg-accent);
+  border-radius: 16px;
+}
+
+body.dark-theme .faq-ac.is-active:not(:first-child),
+.faq-ac.is-active:not(:first-child) {
+  border-bottom: none;
+  margin-top: 4px;
 }
 
 /*button*/
