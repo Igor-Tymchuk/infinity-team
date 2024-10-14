@@ -44,9 +44,17 @@ document.addEventListener('DOMContentLoaded', function () {
     navIcon.classList.toggle('open');
   });
 });
+const checkboxTheme = document.querySelector("#change-theme");
 
-document.getElementById('change-theme').addEventListener('keydown', function(event) {
+
+const changeThemeFn = () => {
+document.body.classList.toggle("dark-theme");
+}
+
+checkboxTheme.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
     this.checked = !this.checked;
+    changeThemeFn();
   }
 });
+checkboxTheme.addEventListener('change', changeThemeFn);

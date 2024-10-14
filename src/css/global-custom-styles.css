@@ -10,10 +10,13 @@ body {
 }
 
 body.dark-theme {
-  background-color: var(--c-dt-body-bg);
-  color: var(--c-dt-text-main);
+  --c-lt-body-bg: #1e2023;
+  --c-lt-text-main: #f0f0f0;
+  --c-lt-elem-accent: #14c57c;
+  --c-lt-elem-bg: #2a2d32;
+  --c-lt-elem-bg-accent: #204136;
+  --c-lt-elem-bg-effect: #3b3f45;
 }
-
 /** TEXT STYLES */
 
 /* h1 */

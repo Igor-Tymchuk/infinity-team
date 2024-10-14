@@ -97,7 +97,7 @@
 
 /* Чекбокс перемикання теми */
 .theme-checkbox:focus {
-    box-shadow: 0px 0px 0px 2px black;
+    box-shadow: 0px 0px 0px 2px grey;
 }
 .theme-checkbox {
     -webkit-appearance: none;

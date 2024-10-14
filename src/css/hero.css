@@ -72,6 +72,9 @@
   max-width: 416px;
   height: 92px;
 }
+.section-hero .button:focus {
+  outline: auto;
+}
 .section-hero .button {
   position: relative;
   display: block;
