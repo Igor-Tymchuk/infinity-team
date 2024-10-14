@@ -44,18 +44,18 @@ function initSwiper() {
       prevSlideMessage: 'Previous review',
       nextSlideMessage: 'Next review',
     },
+    slidesPerGroup: 1,
     breakpoints: {
       320: {
         slidesPerView: 1,
-        slidesPerGroup: 1,
       },
       768: {
         slidesPerView: 1,
-        slidesPerGroup: 1,
+        // slidesPerGroup: 1,
       },
       1280: {
         slidesPerView: 2,
-        slidesPerGroup: 2,
+        // slidesPerGroup: 1,
       },
     },
     on: {
