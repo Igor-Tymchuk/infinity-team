@@ -4,16 +4,11 @@ export async function fetchPosts() {
     const response = await axios(
         'https://portfolio-js.b.goit.study/api/reviews'
     );
-    console.log(response.status);
-    if (response.status !== 200) {
-        document.addEventListener('scroll', listenHeight);
-        console.log(response);
-    }
     return response.data;
 }
 fetchPosts()
-    .then(response => console.log(response))
-    .catch(e => console.log(e.response.data.message));
+    .then(response => response)
+    .catch(e => e);
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -30,7 +25,7 @@ const iziError = () =>
     });
 let showSection = false;
 
-const listenHeight = () => {
+export const listenHeight = () => {
     if (!showSection) {
         const section = document.querySelector('#reviews');
         const sectionPosition = section.getBoundingClientRect().top;

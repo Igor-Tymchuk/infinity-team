@@ -1,4 +1,4 @@
-import { fetchPosts } from './reviews-api';
+import { fetchPosts, listenHeight } from './reviews-api';
 import { renderReviews, errorPost } from './reviews-render-functions';
 
 import Swiper from 'swiper';
@@ -24,12 +24,7 @@ async function reviews() {
     }
     updateNavigationButtons();
   } catch (error) {
-    iziToast.show({
-      message: 'Not found',
-      color: 'red',
-      position: 'topRight',
-    });
-    errorPost();
+    document.addEventListener('scroll', listenHeight);
   }
 }
 
