@@ -44,13 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
     navIcon.classList.toggle('open');
   });
 });
+
+
 const checkboxTheme = document.querySelector("#change-theme");
-
-
 const changeThemeFn = () => {
 document.body.classList.toggle("dark-theme");
+if (localStorage.getItem("theme") !== "dark") localStorage.setItem("theme", "dark");
+else localStorage.setItem("theme", "light");
 }
-
 checkboxTheme.addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
     this.checked = !this.checked;
@@ -58,3 +59,12 @@ checkboxTheme.addEventListener('keydown', function(event) {
   }
 });
 checkboxTheme.addEventListener('change', changeThemeFn);
+if (!localStorage.getItem("theme")) localStorage.setItem("theme", "light");
+if (localStorage.getItem("theme") === "dark") {
+  checkboxTheme.setAttribute("checked", "true");
+  document.body.classList.add("dark-theme");
+}
+else {
+  checkboxTheme.removeAttribute("checked");
+  document.body.classList.remove("dark-theme");
+}
