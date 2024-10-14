@@ -12,81 +12,52 @@
 }
 
 .reviews-list {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 0;
+  margin-bottom: 24px;
 }
 
 .reviews-item {
-  display: flex;
-  /* align-items: flex-start; */
-  /* justify-content: space-between; */
-  flex-direction: column;
-  column-gap: 24px;
-  border-radius: 16px;
-  padding: 32px;
-  width: 100%;
-  /* min-width: 320px;
-  max-width: 360px; */
   background-color: var(--c-lt-elem-bg);
+  padding: 32px;
+  border-radius: 16px;
 }
 
-.swiper-slide {
+.reviews-item .slide-box {
+  height: 100%;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Контролює вертикальне розташування вмісту */
+  row-gap: 24px;
 }
 
-.reviews-text {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: var(--c-lt-text-main);
-}
-
-.reviews-container {
+.review-author-box {
   display: flex;
+  column-gap: 16px;
   align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  width: 100%;
-  min-width: 320px;
-  max-width: 704px;
-  margin: 0;
+  margin-top: auto;
 }
 
-.reviews-wrap-img {
-  display: block;
+.review-author-img-box {
+  border-radius: 24px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  border-color: #bcdfd1;
   overflow: hidden;
 }
 
-.reviews-img {
+.review-author-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.reviews-name {
-  display: block;
+.review-author-name {
   font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: var(--c-lt-text-main);
 }
 
 .reviews-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 16px;
-  margin-top: 24px;
+  column-gap: 16px;
+  /* margin-top: 24px; */
 }
 
 .reviews-btn {
@@ -96,7 +67,7 @@
   border: 1px solid var(--c-lt-elem-bg);
   border-radius: 8px;
   padding: 12px;
-  min-width: 40px;
+  width: 40px;
   height: 40px;
   background-color: transparent;
   cursor: pointer;
@@ -124,15 +95,9 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .reviews {
-    padding-bottom: 4px;
-  }
   .reviews-title {
     margin-bottom: 60px;
   }
-  /* .reviews-item {
-    min-width: 704px;
-  } */
 }
 
 @media only screen and (min-width: 1280px) {
@@ -142,14 +107,9 @@
   .reviews-title {
     margin-bottom: 80px;
   }
-  .reviews-list {
-    flex-basis: calc((100% - 10px) / 2);
-  }
+
   .reviews-btn {
-    min-width: 48px;
+    width: 48px;
     height: 48px;
-  }
-  .reviews-container {
-    max-width: 592px;
   }
 }

@@ -13,118 +13,134 @@ const reviewsSwiper = document.querySelector('.swiper-container');
 let swiper;
 
 async function reviews() {
-    try {
-        const posts = await fetchPosts();
-        renderReviews(posts);
+  try {
+    const posts = await fetchPosts();
+    renderReviews(posts);
 
-        if (!swiper) {
-            initSwiper();
-        } else {
-            swiper.update();
-        }
-        updateNavigationButtons();
-    } catch (error) {
-        iziToast.show({
-            message: 'Not found',
-            color: 'red',
-            position: 'topRight',
-        });
-        errorPost();
+    if (!swiper) {
+      initSwiper();
+    } else {
+      swiper.update();
     }
+    updateNavigationButtons();
+  } catch (error) {
+    iziToast.show({
+      message: 'Not found',
+      color: 'red',
+      position: 'topRight',
+    });
+    errorPost();
+  }
 }
 
 reviews();
 
 function initSwiper() {
-    swiper = new Swiper('.swiper-container', {
-        // navigation: {
-        //   prevEl: prevBtn,
-        //   nextEl: nextBtn,
-        // },
-        direction: 'horizontal',
-        loop: false,
-        effect: 'slide',
-        // keyboard: {
-        //   enabled: true,
-        //   onlyInViewport: true,
-        // },
-        longSwipesMs: 300,
-        grabCursor: true,
-        a11y: {
-            enabled: true,
-            prevSlideMessage: 'Previous review',
-            nextSlideMessage: 'Next review',
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-            },
-            768: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-            },
-            1280: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-            },
-        },
-        on: {
-            slideChange: function () {
-                updateNavigationButtons();
-            },
-        },
-    });
+  swiper = new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    spaceBetween: '32',
+    loop: false,
+    effect: 'slide',
+
+    longSwipesMs: 300,
+    grabCursor: true,
+    a11y: {
+      enabled: true,
+      prevSlideMessage: 'Previous review',
+      nextSlideMessage: 'Next review',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        // slidesPerGroup: 1,
+      },
+      768: {
+        slidesPerView: 1,
+        // slidesPerGroup: 1,
+      },
+      1280: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+    },
+    on: {
+      init: function () {
+        setEqualHeight();
+      },
+
+      slideChange: function () {
+        updateNavigationButtons();
+      },
+      function() {
+        setEqualHeight();
+      },
+    },
+  });
 }
 
 prevBtn.addEventListener('click', () => {
-    swiper.slidePrev();
+  swiper.slidePrev();
 });
 
 nextBtn.addEventListener('click', () => {
-    swiper.slideNext();
+  swiper.slideNext();
 });
 
 function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <=
-            (window.innerWidth || document.documentElement.clientWidth)
-    );
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
 
 function swiperKeyboardNav(e) {
-    if (isInViewport(reviewsSwiper)) {
-        if (e.key === 'ArrowLeft') {
-            swiper.slidePrev();
-        } else if (e.key === 'ArrowRight') {
-            swiper.slideNext();
-        }
+  if (isInViewport(reviewsSwiper)) {
+    if (e.key === 'ArrowLeft') {
+      swiper.slidePrev();
+    } else if (e.key === 'ArrowRight') {
+      swiper.slideNext();
     }
+  }
 }
 
 document.addEventListener('keydown', swiperKeyboardNav);
 
-function updateNavigationButtons() {
-    if (swiper.isBeginning) {
-        prevBtn.classList.add('disabled');
-        prevBtn.setAttribute('disabled', true);
-    } else {
-        prevBtn.classList.remove('disabled');
-        prevBtn.removeAttribute('disabled');
-    }
+function setEqualHeight() {
+  const slides = document.querySelectorAll('.reviews-item');
+  let maxHeight = 0;
 
-    if (swiper.isEnd) {
-        nextBtn.classList.add('disabled');
-        nextBtn.setAttribute('disabled', true);
-    } else {
-        nextBtn.classList.remove('disabled');
-        nextBtn.removeAttribute('disabled');
+  slides.forEach(slide => {
+    const slideHeight = slide.offsetHeight;
+    if (slideHeight > maxHeight) {
+      maxHeight = slideHeight;
     }
+  });
+
+  slides.forEach(slide => {
+    slide.style.height = `${maxHeight}px`;
+  });
+}
+
+function updateNavigationButtons() {
+  if (swiper.isBeginning) {
+    prevBtn.classList.add('disabled');
+    prevBtn.setAttribute('disabled', true);
+  } else {
+    prevBtn.classList.remove('disabled');
+    prevBtn.removeAttribute('disabled');
+  }
+
+  if (swiper.isEnd) {
+    nextBtn.classList.add('disabled');
+    nextBtn.setAttribute('disabled', true);
+  } else {
+    nextBtn.classList.remove('disabled');
+    nextBtn.removeAttribute('disabled');
+  }
 }
 
 updateNavigationButtons();
