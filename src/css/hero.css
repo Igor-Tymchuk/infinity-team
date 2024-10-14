@@ -36,6 +36,10 @@
     background-color var(--trn-main-transition-params);
 }
 
+body.dark-theme .section-hero .rect {
+  background-color: var(--c-dt-elem-accent);
+}
+
 .section-hero .main-title span {
   color: var(--c-lt-elem-accent);
 }
@@ -92,6 +96,11 @@
   outline: none;
   border: none;
   z-index: 1;
+}
+
+body.dark-theme .section-hero .button-box:hover .rect,
+body.dark-theme .section-hero .button-box:focus .rect {
+  background-color: var(--c-dt-elem-effect);
 }
 
 .section-hero .button-box:hover .rect,

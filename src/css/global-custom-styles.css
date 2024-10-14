@@ -10,12 +10,14 @@ body {
 }
 
 body.dark-theme {
-  --c-lt-body-bg: #1e2023;
-  --c-lt-text-main: #f0f0f0;
-  --c-lt-elem-accent: #14c57c;
-  --c-lt-elem-bg: #2a2d32;
-  --c-lt-elem-bg-accent: #204136;
-  --c-lt-elem-bg-effect: #3b3f45;
+  --c-lt-body-bg: var(--c-dt-body-bg);
+  --c-lt-text-main: var(--c-dt-text-main);
+  --c-lt-elem-accent: var(--c-dt-elem-accent);
+  --c-lt-elem-effect: var(--c-dt-elem-effect);
+  --c-lt-elem-bg: var(--c-dt-elem-bg);
+  --c-lt-elem-bg-accent: var(--c-dt-elem-bg-accent);
+  --c-lt-elem-bg-effect: var(--c-dt-elem-effect);
+  --c-lt-error: var(--c-dt-error);
 }
 /** TEXT STYLES */
 
