@@ -69,13 +69,13 @@ function initSwiper() {
       },
 
       slideChange: function () {
-        updateNavigationButtons();
-      },
-      function() {
         setEqualHeight();
+        updateNavigationButtons();
       },
     },
   });
+
+  window.addEventListener('resize', setEqualHeight);
 }
 
 prevBtn.addEventListener('click', () => {
@@ -111,6 +111,11 @@ document.addEventListener('keydown', swiperKeyboardNav);
 
 function setEqualHeight() {
   const slides = document.querySelectorAll('.reviews-item');
+
+  slides.forEach(slide => {
+    slide.style.height = 'auto';
+  });
+
   let maxHeight = 0;
 
   slides.forEach(slide => {

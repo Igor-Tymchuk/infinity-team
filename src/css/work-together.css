@@ -7,9 +7,9 @@
   max-width: 255px;
 }
 
-.work-span {
+/* .work-span {
   color: var(--c-lt-elem-accent);
-}
+} */
 
 .work-contact {
   padding-bottom: 40px;
@@ -102,7 +102,7 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--c-lt-text-main);
-    color: var(--c-lt-text-main);
+  color: var(--c-lt-text-main);
 }
 
 .work-input-wrapper {

@@ -1,7 +1,6 @@
-.benefits-title span {
+/* .benefits-title span {
   color: transparent;
   -webkit-background-clip: text;
-  /* -webkit-text-stroke: 1px var(--c-lt-elem-accent); */
   background-image: linear-gradient(
     60deg,
     var(--c-lt-elem-accent) 0,
@@ -14,7 +13,7 @@
   background-size: 250% 100%;
   animation: titleGlare linear infinite;
   animation-duration: 20s;
-}
+} */
 
 .benefits-list {
   display: flex;
@@ -158,7 +157,7 @@
   }
 }
 
-@keyframes gradientShift {
+/* @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
@@ -168,13 +167,13 @@
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
-@keyframes titleGlare {
+/* @keyframes titleGlare {
   0% {
     background-position: 250% 50%;
   }
   100% {
     background-position: -250% 50%;
   }
-}
+} */
