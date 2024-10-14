@@ -27,9 +27,13 @@ body.dark-theme .faq-ac {
   border-radius: 16px;
 }
 
+.faq-ac.is-active,
+body.dark-theme .faq-ac.is-active {
+  border-bottom: none;
+}
+
 body.dark-theme .faq-ac.is-active:not(:first-child),
 .faq-ac.is-active:not(:first-child) {
-  border-bottom: none;
   margin-top: 4px;
 }
 
