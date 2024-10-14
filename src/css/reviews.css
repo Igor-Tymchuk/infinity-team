@@ -7,9 +7,13 @@
   margin-bottom: 40px;
 }
 
+.swiper-container {
+  overflow: hidden;
+}
+
 .reviews-list {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: space-between;
   gap: 10px;
   padding: 0;
@@ -17,16 +21,22 @@
 
 .reviews-item {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  /* align-items: flex-start; */
+  /* justify-content: space-between; */
   flex-direction: column;
-  gap: 24px;
+  column-gap: 24px;
   border-radius: 16px;
   padding: 32px;
   width: 100%;
-  min-width: 320px;
-  max-width: 360px;
+  /* min-width: 320px;
+  max-width: 360px; */
   background-color: var(--c-lt-elem-bg);
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Контролює вертикальне розташування вмісту */
 }
 
 .reviews-text {
@@ -120,9 +130,9 @@
   .reviews-title {
     margin-bottom: 60px;
   }
-  .reviews-item {
+  /* .reviews-item {
     min-width: 704px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1280px) {

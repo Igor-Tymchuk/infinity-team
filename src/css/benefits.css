@@ -1,7 +1,7 @@
 .benefits-title span {
   color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 1px var(--c-lt-elem-accent);
+  /* -webkit-text-stroke: 1px var(--c-lt-elem-accent); */
   background-image: linear-gradient(
     60deg,
     var(--c-lt-elem-accent) 0,

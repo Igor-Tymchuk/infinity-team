@@ -3,12 +3,13 @@ import { renderReviews, errorPost } from './reviews-render-functions';
 
 import Swiper from 'swiper';
 import 'swiper/css';
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 export const list = document.querySelector('.reviews-list');
 const prevBtn = document.querySelector('.reviews-btn.left');
 const nextBtn = document.querySelector('.reviews-btn.right');
+const reviewsSwiper = document.querySelector('.swiper-container');
 let swiper;
 
 async function reviews() {
@@ -22,33 +23,32 @@ async function reviews() {
             swiper.update();
         }
         updateNavigationButtons();
-
     } catch (error) {
         iziToast.show({
-            message: "Not found",
-            color: "red",
-            position: "topRight",
+            message: 'Not found',
+            color: 'red',
+            position: 'topRight',
         });
         errorPost();
     }
-};
+}
 
 reviews();
 
 function initSwiper() {
     swiper = new Swiper('.swiper-container', {
+        // navigation: {
+        //   prevEl: prevBtn,
+        //   nextEl: nextBtn,
+        // },
         direction: 'horizontal',
         loop: false,
         effect: 'slide',
-        keyboard: {
-            enabled: true,
-            onlyInViewport: false,
-        },
+        // keyboard: {
+        //   enabled: true,
+        //   onlyInViewport: true,
+        // },
         longSwipesMs: 300,
-        navigation: {
-            nextEl: '.reviews-btn.right',
-            prevEl: '.reviews-btn.left',
-        },
         grabCursor: true,
         a11y: {
             enabled: true,
@@ -75,7 +75,39 @@ function initSwiper() {
             },
         },
     });
-};
+}
+
+prevBtn.addEventListener('click', () => {
+    swiper.slidePrev();
+});
+
+nextBtn.addEventListener('click', () => {
+    swiper.slideNext();
+});
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function swiperKeyboardNav(e) {
+    if (isInViewport(reviewsSwiper)) {
+        if (e.key === 'ArrowLeft') {
+            swiper.slidePrev();
+        } else if (e.key === 'ArrowRight') {
+            swiper.slideNext();
+        }
+    }
+}
+
+document.addEventListener('keydown', swiperKeyboardNav);
 
 function updateNavigationButtons() {
     if (swiper.isBeginning) {
