@@ -295,11 +295,14 @@
   z-index: 5;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--trn-main-transition-params);
 }
 
 .is-open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .work-modal {
