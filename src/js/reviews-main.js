@@ -126,6 +126,7 @@ function setEqualHeight() {
 }
 
 function updateNavigationButtons() {
+  if (!swiper) return;
   if (swiper.isBeginning) {
     prevBtn.classList.add('disabled');
     prevBtn.setAttribute('disabled', true);
