@@ -2,7 +2,7 @@ import { list } from './reviews-main';
 
 export function renderReviews(posts) {
     const markup = posts
-        .map((post) => {
+        .map(post => {
             const { review, avatar_url, author } = post;
             return `
             <li class="reviews-item swiper-slide">
@@ -19,9 +19,10 @@ export function renderReviews(posts) {
         })
         .join('');
     list.insertAdjacentHTML('beforeend', markup);
-};
+}
 
 export function errorPost() {
-    const markup = '<li class="reviews-item"><p class="reviews-name">Not found</p></li>';
+    const markup =
+        '<li class="reviews-item"><p class="reviews-name">Not found</p></li>';
     list.insertAdjacentHTML('beforeend', markup);
-};
+}
