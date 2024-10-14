@@ -44,3 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
     navIcon.classList.toggle('open');
   });
 });
+
+document.getElementById('change-theme').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    this.checked = !this.checked;
+  }
+});

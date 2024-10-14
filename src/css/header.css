@@ -96,6 +96,9 @@
 }
 
 /* Чекбокс перемикання теми */
+.theme-checkbox:focus {
+    box-shadow: 0px 0px 0px 2px black;
+}
 .theme-checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
