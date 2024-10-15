@@ -69,6 +69,7 @@ body.dark-theme .section-hero .rect {
   .section-hero .button-box:hover .button,
   .section-hero .button-box:focus .button {
     letter-spacing: 0.07em;
+    padding: 32px 47px 32px 47px;
   }
 }
 .section-hero .button-box {
@@ -81,7 +82,10 @@ body.dark-theme .section-hero .rect {
 }
 .section-hero .button {
   position: relative;
-  display: block;
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--ff-global-font);
   font-weight: 400;
   font-size: 18px;
@@ -110,7 +114,8 @@ body.dark-theme .section-hero .button-box:focus .rect {
 
 .section-hero .button-box .button {
   transition: color var(--trn-main-transition-params),
-    letter-spacing var(--trn-main-transition-params);
+    letter-spacing var(--trn-main-transition-params),
+    padding var(--trn-main-transition-params);
 }
 
 @keyframes glowing {
@@ -216,6 +221,7 @@ body.dark-theme .section-hero .button-box:focus .rect {
   .section-hero .button-box:hover .button,
   .section-hero .button-box:focus .button {
     letter-spacing: 0.36em;
+    padding: 32px 47px 32px 47px;
   }
   .section-hero .button-box:focus {
     outline: transparent;
