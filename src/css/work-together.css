@@ -195,7 +195,7 @@
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 336px 260px;
-    z-index: 2;
+    z-index: 20;
     padding-top: 120px;
   }
 
@@ -249,7 +249,7 @@
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 526px 408px;
-    z-index: 2;
+    z-index: 20;
     padding-top: 160px;
   }
 
@@ -292,7 +292,7 @@
   background: rgba(41, 41, 41, 0.8);
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 25;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -334,7 +334,7 @@
 }
 
 .work-text-container-a {
-  z-index: 3;
+  z-index: 23;
 }
 
 .work-modal-title {
