@@ -2,9 +2,10 @@
   position: fixed;
   bottom: 32px;
   right: 24px;
-  z-index: 10;
+  z-index: 1;
   width: 40px;
   height: 40px;
+  box-shadow: 0 0 5px 1px var(--c-lt-elem-bg-effect);
   border: none;
   border-radius: 16px;
   background-color: var(--c-lt-elem-bg-accent);
