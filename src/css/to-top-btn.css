@@ -1,0 +1,111 @@
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 24px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--c-lt-elem-bg-accent);
+
+  color: var(--color-alt-text);
+
+  transition: background-color var(--trn-main-transition-params),
+    visibility var(--trn-main-transition-params),
+    opacity var(--trn-main-transition-params),
+    height var(--trn-main-transition-params);
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.scroll-to-top-btn:is(:hover, :focus) {
+  background-color: var(--c-lt-elem-effect);
+  height: 80px;
+}
+
+.scroll-to-top-icon {
+  position: absolute;
+  fill: transparent;
+  stroke: var(--c-lt-text-main);
+  width: 24px;
+  height: 24px;
+
+  top: 8px;
+  left: 8px;
+
+  /* transition: top var(--trn-main-transition-params); */
+}
+
+/* .scroll-to-top-btn:is(:hover, :focus) .scroll-to-top-icon {
+  top: 10%;
+} */
+
+.scroll-up-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-up-visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media screen and (min-width: 768px) {
+  .scroll-to-top-btn {
+    bottom: 40px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .scroll-to-top-icon {
+    width: 32px;
+    height: 32px;
+    /* top: 8px;
+    left: 8px; */
+  }
+
+  .scroll-to-top-btn:is(:hover, :focus) {
+    height: 96px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .scroll-to-top-btn {
+    bottom: 72px;
+    right: 48px;
+  }
+}
+
+/* @keyframes arrowMove {
+  0% {
+    bottom: 8px;
+  }
+  31% {
+    bottom: 8px;
+  }
+
+  35% {
+    bottom: 25%;
+  }
+
+  60% {
+    bottom: 25%;
+  }
+  64% {
+    bottom: 52%;
+  }
+
+  96% {
+    bottom: 52%;
+  }
+
+  100% {
+    bottom: 65%;
+  }
+} */
