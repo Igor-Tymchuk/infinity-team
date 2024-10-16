@@ -5,7 +5,8 @@
   z-index: 11;
   width: 40px;
   height: 40px;
-  box-shadow: 0 0 5px 1px var(--c-lt-elem-bg-effect);
+  /* box-shadow: 0 0 5px 1px var(--c-lt-elem-bg-effect); */
+  box-shadow: 0 0 5px 1px var(--c-lt-text-main);
   border: none;
   border-radius: 16px;
   background-color: var(--c-lt-elem-bg-accent);
