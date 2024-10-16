@@ -25,6 +25,7 @@ async function reviews() {
     updateNavigationButtons();
   } catch (error) {
     document.addEventListener('scroll', listenHeight);
+    errorPost();
   }
 }
 

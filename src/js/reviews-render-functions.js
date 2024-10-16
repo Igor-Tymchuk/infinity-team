@@ -25,6 +25,6 @@ export function renderReviews(posts) {
 
 export function errorPost() {
   const markup =
-    '<li class="reviews-item"><p class="reviews-name">Not found</p></li>';
+    '<li class="reviews-item swiper-slide"><div class="slide-box"><div class="review-author-box"><p class="review-author-name">Not found</p></div></div></li>';
   list.insertAdjacentHTML('beforeend', markup);
 }
